@@ -8,7 +8,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Title" content="Hongo – Modern & Multipurpose WooCommerce WordPress Theme – Home Page Watch">
     <meta name="Publisher" content="프론트엔드 박소혜">
-    <meta name="Author-date" content="2020-11-24"> 
+    <meta name="Author-date" content="2020-11-25"> 
     <meta name="Author" content="Hongo – Modern & Multipurpose WooCommerce WordPress Theme">
     <meta name="Copyright" content="HONGO is Proudly Powered by ThemeZaa">
     <meta name="Keywords" content="creative, modern, clean, bootstrap responsive, WordPress theme, drag & drop page builder, revolution slider, html5, css3, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, wpml, Yoast SEO, masonry, grid, coming soon, faq">
@@ -62,7 +62,7 @@
 <div id="wrap">
     <header id="header"> <!-- width:100%;1903px -->
         <div class="gap"> <!-- padding 35px 1833px padding 35px -->
-            <div class="content"> <!-- width:1833px -->
+            <div class="content fixedclear"> <!-- width:1833px -->
                 <div class="logo">
                     <div class="logo-gap">
                         <div class="logo-wrap">
@@ -75,34 +75,48 @@
                     <div class="menu-wrap">
                         <nav id="id">
                             <ul>
-                                <li><a href="javascript:" title="Home">Home</a></li>
-                                <li><a href="javascript:" title="Shop">Shop</a></li>
-                                <li><a href="javascript:" title="Sale">Sale</a></li>
-                                <li><a href="javascript:" title="Pages">Pages</a></li>
-                                <li><a href="javascript:" title="Blog">Blog</a></li>
-                                <li><a href="javascript:" title="Elements">Elements</a></li>
-                                <li><a href="javascript:" title="Features">Features</a></li>
+                                <div><!-- 7개 li 감싸줌 -->
+                                    <li>
+                                        <a href="javascript:" title="Home">Home</a>
+                                        <aside id="aside">
+                                            <ul class="fixedclear">
+                                                <li><div><a href="#" title="Fashion"> Fashion</a><img src="./img/fashion-menu.jpg" alt="Fashion"></div></li>
+                                                <li><div><a href="#" title="Furniture"> Furniture</a><img src="./img/furniture-menu.jpg" alt="Furniture"></div></li>
+                                                <li><div><a href="#" title="Jewellery"> Jewellery</a><img src="./img/jewellery-menu.jpg" alt="Jewellery"></div></li>
+                                                <li><div><a href="#" title="Watch"> Watch</a><img src="./img/watch-menu.jpg" alt="Watch"></div></li>
+                                                <li><div><a href="#" title="Electronic"> Electronic</a><img src="./img/electronic-menu.jpg" alt="Electronic"></div></li>
+                                                <li><div><a href="#" title="Decor"> Decor</a><img src="./img/decor-menu.jpg" alt="Decor"></div></li>
+                                                <li><div><a href="#" title="Shoes"> Shoes</a><img src="./img/shoes-menu.jpg" alt="Shoes"></div></li>
+                                                <li><div><a href="#" title="Lingerie"> Lingerie</a><img src="./img/lingerie-menu.jpg" alt="Lingerie"></div></li>
+                                            </ul>
+                                        </aside>
+                                    </li>
+                                    <li><a href="javascript:" title="Shop">Shop</a></li>
+                                    <li><a href="javascript:" title="Sale">Sale</a></li>
+                                    <li><a href="javascript:" title="Pages">Pages</a></li>
+                                    <li><a href="javascript:" title="Blog">Blog</a></li>
+                                    <li><a href="javascript:" title="Elements">Elements</a></li>
+                                    <li><a href="javascript:" title="Features">Features</a></li>
+                                </div>    
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="side-menu">
-                    <aside id="aside">
-                        <ul>
-                            <a href="javascript:">
-                                <li><i class="fas fa-search"></i></li>
-                            </a>
-                            <a href="javascript:">
-                                <li><i class="fas fa-user"></i></li>
-                            </a>
-                            <a href="javascript:">
-                                <li><i class="far fa-heart"></i></li>
-                            </a>
-                            <a href="javascript:">
-                                <li><i class="fas fa-shopping-cart"></i></li>
-                            </a>
-                        </ul>
-                    </aside>
+                <div class="simple-menu">
+                    <ul>
+                        <a href="javascript:">
+                            <li><i class="fas fa-search"></i></li>
+                        </a>
+                        <a href="javascript:">
+                            <li><i class="fas fa-user"></i></li>
+                        </a>
+                        <a href="javascript:">
+                            <li><i class="far fa-heart"></i></li>
+                        </a>
+                        <a href="javascript:">
+                            <li><i class="fas fa-shopping-cart"></i></li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>

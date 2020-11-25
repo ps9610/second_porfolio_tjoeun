@@ -3,18 +3,31 @@
 #header .gap {padding:0 35px;}
 /* .logo .center .icons */
 #header .gap .content {width:100%;}
-#header .gap .content .logo {width:100%;max-width:305.484px;height:100%;max-height:70.11px;}
+#header .gap .content .logo {float:left;width:305.48px;max-width:305.484px;height:100%;max-height:70.11px;}
 #header .gap .content .logo .logo-gap {padding:0 15px;}/* 0 15px */
 #header .gap .content .logo .logo-gap .logo-wrap {width:100%;height:100%;}/* padding:23.06px 0; */
 #header .gap .content .logo .logo-gap .logo-wrap > h2 {width:100%;height:70.11px;}
 #header .gap .content .logo .logo-gap .logo-wrap > h2 > a {display:inline-block;width:106px;margin:23.055px 0;line-height:24px;}
 #header .gap .content .logo .logo-gap .logo-wrap > h2 > a > img {width:auto;height:auto;}
 
-#header .gap .content .menu {width:1221.980px;}
+#header .gap .content .menu {float:left;width:1221.980px;height:100%;}
 #header .gap .content .menu .menu-wrap {padding:0 15px;}
-#header .gap .content .menu .menu-wrap #nav {}
-#header .gap .content .menu .menu-wrap #nav > ul {}
-#header .gap .content .side-menu {}
+#header .gap .content .menu .menu-wrap #nav {width:100%;height:100%;background:#c99;}
+#header .gap .content .menu .menu-wrap #nav > ul {width:100%;}
+#header .gap .content .menu .menu-wrap #nav > ul > div {width:476.59px;}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li {float:left;width:auto;}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a {display:block;padding:27px 18px;}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a:first-child {padding:27px 18px 27px 0;}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a:last-child {padding:27px 0 27px 18px;}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a #aside {}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a #aside > ul {}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a #aside > ul > li {}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a #aside > ul > li > div {} /* 여백 */
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a #aside > ul > li > div > a {}
+#header .gap .content .menu .menu-wrap #nav > ul > div > li > a #aside > ul > li > div > a > img {}
+
+#header .gap .content .simple-menu {float:left;}
+
 
 #main {z-index:2;position:relative;}
 #main #section1 {width:100%;height:880px;}
