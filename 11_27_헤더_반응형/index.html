@@ -8,7 +8,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Title" content="Hongo – Modern & Multipurpose WooCommerce WordPress Theme – Home Page Watch">
     <meta name="Publisher" content="프론트엔드 박소혜">
-    <meta name="Author-date" content="2020-11-25"> 
+    <meta name="Author-date" content="2020-11-27"> 
     <meta name="Author" content="Hongo – Modern & Multipurpose WooCommerce WordPress Theme">
     <meta name="Copyright" content="HONGO is Proudly Powered by ThemeZaa">
     <meta name="Keywords" content="creative, modern, clean, bootstrap responsive, WordPress theme, drag & drop page builder, revolution slider, html5, css3, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, wpml, Yoast SEO, masonry, grid, coming soon, faq">
@@ -75,7 +75,7 @@
                     <div class="menu-wrap">
                         <nav class="nav">
                             <ul class="fixedclear"><!-- 7개 li 감싸줌 -->
-                                    <li>
+                                    <li class="addHamburger">
                                         <a href="javascript:" title="Home"><span>Home</span></a>
                                         <!--<aside class="aside">
                                              <ul class="fixedclear">
@@ -105,19 +105,19 @@
                         <div class="container">
                             <ul class="fixedclear">
                                 <li>
-                                    <div><a href="javascript:"><i class="fas fa-search"></i></a></div>
+                                    <div><a href="javascript:" title="Icon Search"><i class="fas fa-search"></i></a></div>
                                 </li>
                                 <li>
-                                    <div><a href="javascript:"><i class="fas fa-user"></i></a></div>
+                                    <div><a href="javascript:" title="Icon User"><i class="fas fa-user"></i></a></div>
                                 </li>
                                 <li>
-                                    <div><a href="javascript:"><i class="far fa-heart"></i></a></div>
+                                    <div><a href="javascript:" title="Icon Heart"><i class="far fa-heart"></i></a></div>
                                 </li>
                                 <li>
-                                    <div><a href="javascript:">
+                                    <div><a href="javascript:" title="Icon Shopping Cart">
                                         <i class="fas fa-shopping-cart"></i>
-                                        <div><span>0</span></div>
-                                    </a></div>
+                                        <div><span>0</span></div></a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>    
@@ -143,6 +143,40 @@
         <section id="section9"></section>
     </main>
     <footer id="footer"></footer>
+
+    <div class="modal">
+        <div class="container">
+            <div class="gap">
+                <div class="img-wrap">
+                    <h2><img src="./img/pup-subscribe.jpg" alt="Join our newsletter"></h2>
+                </div>
+                <div class="text-wrap fixedclear">
+                    <div class="content-wrap">
+                        <h2>Join our newsletter<br> and get 20% discount</h2>
+                    </div>
+                    <div class="input-wrap">
+                        <div class="email-wrap">
+                            <input type="email" name="email-text" id="email-text" placeholder="Enter Your Email✉">
+                        </div>
+                        <span><i class="fas fa-angle-right"></i></span>
+                        <div class="check-wrap">
+                            <div>
+                                <input type="checkbox" name="check" id="check" value="checkbox">
+                                <label for="check">Prevent This Pop-up</label>             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close">
+                <div class="close-wrap">
+                    <span><a href="javascript:" class="close-btn" title="close button"><i class="fas fa-window-close"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
 </div>
 </body>
 </html>
