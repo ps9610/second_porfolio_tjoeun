@@ -12,8 +12,14 @@ var hongo = {
         var winW = $(window).innerWidth();
         var simpleHeartMenu = $("#header .simple-menu li").eq(2);
         var t=0;
-        //var li = $("#header .nav li")
-        //var aside = $("#header .aside");
+        var menuWrap = $("#header .menu-wrap");
+        var aside4Btn1AndSide1 = $("#header .aside4-btn1, #header .aside-side1");
+        var asideSide1 = $("#header .aside-side1");
+        var aside4Btn2 = $("#header .aside4-btn2");
+        var asideSide2 = $("#header .aside-side2");
+        var aside4Btn3 = $("#header .aside4-btn3");
+        var asideSide3 = $("#header .aside-side3");
+        var mobileMenu = $(".mobile-menu")
 
         setTimeout(resizeFn,100);
 
@@ -22,20 +28,24 @@ var hongo = {
             winW = $(window).innerWidth();
             simpleHeartMenu = $("#header .simple-menu li").eq(2);
             t=0;
+            menuWrap = $("#header .menu-wrap");
+            mobileMenu = $(".mobile-menu");
+
+            var li = $("#header .nav").find(".li-wrap");
             
             if (winW < 992){
                 if(t==0){
                     t=1;
                     simpleHeartMenu.fadeOut(0);
-                    $("#header .menu-wrap").fadeOut(0);
-                    $(".mobile-menu").show();
+                    menuWrap.fadeOut(0);
+                    mobileMenu.show();
                 }
             }
             else{
                 t=0;
                 simpleHeartMenu.fadeIn(0);
-                $("#header .menu-wrap").fadeIn(0);
-                $(".mobile-menu").hide();
+                menuWrap.fadeIn(0);
+                mobileMenu.hide();
 
             }
         };
@@ -44,55 +54,58 @@ var hongo = {
             resizeFn();
         });
 
-        $(".aside4-btn1, .aside-side1").on({
+        aside4Btn1AndSide1.on({
             mouseenter:function(){
-                $(".aside-side1").stop().fadeIn(400);
+                asideSide1.stop().fadeIn(400);
             },
             focusin:function(){
-                $(".aside-side1").stop().fadeIn(400);
+                asideSide1.stop().fadeIn(400);
             }
         })
-        $(".aside4-btn1, .aside-side1").on({
+        aside4Btn1AndSide1.on({
             mouseleave : function(){
-                $(".aside-side1").stop().fadeOut(400);
+                asideSide1.stop().fadeOut(400);
                 
             }
         })       
-
-        $(".aside4-btn2").on({
+        aside4Btn2.on({
             mouseenter:function(){
-                $(".aside-side2").stop().fadeIn(400);
+                asideSide2.stop().fadeIn(400);
             },
             focusin:function(){
-                $(".aside-side2").stop().fadeIn(400);
+                asideSide2.stop().fadeIn(400);
             }
         })
-        $(".aside4-btn2").on({
+        aside4Btn2.on({
             mouseleave : function(){
-                $(".aside-side2").stop().fadeOut(400);
+                asideSide2.stop().fadeOut(400);
             }
         })
 
-        $(".aside4-btn3").on({
+        aside4Btn3.on({
             mouseenter:function(){
-                $(".aside-side3").stop().fadeIn(400);
+                asideSide3.stop().fadeIn(400);
             },
             focusin:function(){
-                $(".aside-side3").stop().fadeIn(400);
+                asideSide3.stop().fadeIn(400);
             }
         })
-        $(".aside4-btn3").on({
+        aside4Btn3.on({
             mouseleave : function(){
-                $(".aside-side3").stop().fadeOut(400);
+                asideSide3.stop().fadeOut(400);
             }
         })
 
-        /*
+
+
+        
         li.each(function(i) {
             $(this).on({
                 mouseenter : function(){
-                    $(".aside").eq(i).stop().slideDown(300,"easeInQuad");
-                    $(".aside").eq(i).next().slideUp(300);
+                    for(var i=0;i<6;i++){
+                        $(".aside").eq(i).stop().slideDown(300,"easeInQuad");
+                        $(".aside").eq(i).next().slideUp(300);
+                    }
                 },
                 focusin : function(){
                     $(".aside").eq(i).stop().slideDown(300,"easeInQuad");
@@ -105,7 +118,7 @@ var hongo = {
                 }  
             })
         })
-        */
+        
     },
 
     /*
@@ -130,6 +143,9 @@ var hongo = {
         });
     }
     */
+
+
+
 }
 
 hongo.init();
