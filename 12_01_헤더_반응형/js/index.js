@@ -19,7 +19,8 @@ var hongo = {
         var asideSide2 = $("#header .aside-side2");
         var aside4Btn3 = $("#header .aside4-btn3");
         var asideSide3 = $("#header .aside-side3");
-        var mobileMenu = $(".mobile-menu")
+        var mobileMenuBar = $("#header .mobile");
+        var mobileMenu = $("#header .mobile-menu")
 
         setTimeout(resizeFn,100);
 
@@ -29,23 +30,21 @@ var hongo = {
             simpleHeartMenu = $("#header .simple-menu li").eq(2);
             t=0;
             menuWrap = $("#header .menu-wrap");
-            mobileMenu = $(".mobile-menu");
-
-            var li = $("#header .nav").find(".li-wrap");
+            mobileMenuBar = $(".mobile");
             
             if (winW < 992){
                 if(t==0){
                     t=1;
                     simpleHeartMenu.fadeOut(0);
                     menuWrap.fadeOut(0);
-                    mobileMenu.show();
+                    mobileMenuBar.show();
                 }
             }
             else{
                 t=0;
                 simpleHeartMenu.fadeIn(0);
                 menuWrap.fadeIn(0);
-                mobileMenu.hide();
+                mobileMenuBar.hide();
 
             }
         };
@@ -53,6 +52,19 @@ var hongo = {
         win_dow.resize(function(){
             resizeFn();
         });
+
+
+
+        mobileMenuBar.on({
+            click:function(){
+                mobileMenu.slideDown(500);
+                $(this).addClass("addClose");
+            }
+        })
+        
+
+
+
 
         aside4Btn1AndSide1.on({
             mouseenter:function(){
@@ -95,30 +107,26 @@ var hongo = {
                 asideSide3.stop().fadeOut(400);
             }
         })
-
-
-
         
-        li.each(function(i) {
-            $(this).on({
-                mouseenter : function(){
-                    for(var i=0;i<6;i++){
-                        $(".aside").eq(i).stop().slideDown(300,"easeInQuad");
-                        $(".aside").eq(i).next().slideUp(300);
-                    }
-                },
-                focusin : function(){
-                    $(".aside").eq(i).stop().slideDown(300,"easeInQuad");
-                    //     $(".aside").next().slideDown(300);
-                },
-            })
-            $(".nav").on({
-                mouseleave : function(){
-                    $(".aside").eq(i).stop().slideUp(300);
-                }  
-            })
+         
+        $(".li-wrap").on({
+            mouseenter:function(){
+                $(".aside").stop().slideUp(0);
+                $(this).next().stop().slideDown(500);
+                //❓ 여기서 왜 next()가 들어가는지 모르겠어요😭
+                // $(this)는 console.log(this)를 입력해서, li-wrap의 a 링크라는 건 알았는데요,
+                // $(this).next()면 해당 클래스의 다음 요소여야 하지 않나요..?
+            },
+            focusin:function(){
+                $(".aside").stop().slideUp(0);
+                $(this).next().stop().slideDown(500);
+            }
+        }) 
+        $(".nav").on({
+            mouseleave:function(){
+                $(".aside").stop().slideUp(300);
+            }
         })
-        
     },
 
     /*

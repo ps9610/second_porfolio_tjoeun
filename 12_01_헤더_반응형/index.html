@@ -27,7 +27,6 @@
     <!-- 오픈 아이콘 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font-awesome 4.0 -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script> <!-- font-awesome 5.0 -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- google -->
 
     <!-- 오픈소스 -->
     <script src="./js/lib/jquery-1.12.4.min.js"></script>
@@ -76,8 +75,8 @@
                     <div class="menu-wrap">
                         <nav class="nav">
                             <ul class="fixedclear"><!-- 7개 li 감싸줌 -->
-                                <li class="li-wrap"> <!-- li 1/7 -->
-                                    <a href="javascript:" title="Home"><span>Home</span></a>
+                                <li> <!-- li 1/7 -->
+                                    <a href="javascript:" class="li-wrap" title="Home"><span>Home</span></a>
                                     <aside class="aside aside0">
                                              <ul class="fixedclear">
                                                 <li>
@@ -148,8 +147,8 @@
                                             </ul> 
                                         </aside>
                                 </li>
-                                <li class="li-wrap"> <!-- li 2/7 -->
-                                    <a href="javascript:" title="Shop"><span>Shop</span></a>
+                                <li> <!-- li 2/7 -->
+                                    <a href="javascript:" class="li-wrap" title="Shop"><span>Shop</span></a>
                                     <aside class="aside aside1">
                                         <ul class="fixedclear">
                                             <li>
@@ -278,8 +277,8 @@
                                         </div>
                                     </aside>
                                 </li>
-                                <li class="li-wrap"> <!-- li 3/7 -->
-                                    <a href="javascript:" title="Sale"><span>Sale</span></a>
+                                <li> <!-- li 3/7 -->
+                                    <a href="javascript:" class="li-wrap" title="Sale"><span>Sale</span></a>
                                         <aside class="aside aside2">
                                             <ul class="fixedclear">
                                                 <li>
@@ -405,9 +404,9 @@
                                                 </li>
                                             </ul>
                                         </aside>
-                                    </li>
-                                <li class="li-wrap"> <!-- li 4/7 -->
-                                    <a href="javascript:" title="Pages"><span>Pages</span></a>
+                                </li>
+                                <li> <!-- li 4/7 -->
+                                    <a href="javascript:" class="li-wrap" title="Pages"><span>Pages</span></a>
                                     <aside class="aside aside3">
                                         <ul class="fixedclear">
                                             <li>
@@ -509,8 +508,8 @@
                                         </ul>    
                                     </aside>
                                 </li>
-                                <li class="li-wrap"> <!-- li 5/7 -->
-                                    <a href="javascript:" title="Blog"><span>Blog</span></a>
+                                <li> <!-- li 5/7 -->
+                                    <a href="javascript:" class="li-wrap" title="Blog"><span>Blog</span></a>
                                     <aside class="aside aside4">
                                         <ul>
                                             <div>
@@ -562,8 +561,8 @@
                                         </ul>
                                     </aside>
                                 </li>
-                                <li class="li-wrap"> <!-- li 6/7 -->
-                                    <a href="javascript:" title="Elements"><span>Elements</span></a>
+                                <li> <!-- li 6/7 -->
+                                    <a href="javascript:" class="li-wrap" title="Elements"><span>Elements</span></a>
                                     <aside class="aside aside5">
                                         <ul class="fixedclear">
                                             <li>
@@ -797,8 +796,8 @@
                                         </ul>
                                     </aside>
                                 </li>
-                                <li class="li-wrap"> <!-- li 7/7 -->
-                                    <a href="javascript:" title="Features"><span>Features</span></a>
+                                <li> <!-- li 7/7 -->
+                                    <a href="javascript:" class="li-wrap" title="Features"><span>Features</span></a>
                                     <aside class="aside aside6">
                                         <ul class="fixedclear">
                                             <li>
@@ -957,8 +956,60 @@
                         </nav>
                     </div>
                     <!--mobile menu bars-->
-                    <div class="fixedclear mobile-menu">
+                    <div class="fixedclear mobile">
                         <a href="javascript:" title="mobile menu button"><span><i class="fas fa-bars"></i></span></a>
+                    </div>
+                    <ul class="mobile-menu">
+                        <li>
+                            <div>
+                                <a href="javascript:">
+                                    <span>Home</span>
+                                    <strong><i class="fas fa-angle-down"></i></strong>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="javascript:">
+                                    <span>Shop</span>
+                                    <strong><i class="fas fa-angle-down"></i></strong>
+                                </a></div></li>
+                        <li>
+                            <div>
+                                <a href="javascript:">
+                                    <span>Sale</span>
+                                    <strong><i class="fas fa-angle-down"></i></strong>
+                                </a></div></li>
+                        <li>
+                            <div>
+                                <a href="javascript:">
+                                    <span>Pages</span>
+                                        <strong><i class="fas fa-angle-down"></i></strong>
+                                        </a></div></li>
+                        <li>
+                            <div>
+                                <a href="javascript:">
+                                    <span>Blog</span>
+                                    <strong><i class="fas fa-angle-down"></i></strong>
+                                </a></div></li>
+                        <li>
+                            <div>
+                                <a href="javascript:">
+                                    <span>Elements</span>
+                                        <strong><i class="fas fa-angle-down"></i></strong>
+                                        </a></div></li>
+                        <li>
+                            <div>
+                                <a href="javascript:">
+                                    <span>Features</span>
+                                        <strong><i class="fas fa-angle-down"></i></strong>
+                                        </a></div></li>
+                    </ul>
+                    <div class="close-btn">
+                        <span>
+                            <i></i>
+                            <i></i>
+                        </span>
                     </div>
                 </div>
                 <div class="simple-menu">
@@ -999,9 +1050,9 @@
         <section id="section3"></section>
         <section id="section4"></section>
         <section id="section5"></section>
+        <section id="section6"></section>
         <section id="section7"></section>
         <section id="section8"></section>
-        <section id="section9"></section>
     </main>
     <footer id="footer"></footer>
 
