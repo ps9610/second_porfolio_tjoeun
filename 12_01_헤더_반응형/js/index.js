@@ -21,6 +21,9 @@ var hongo = {
         var asideSide3 = $("#header .aside-side3");
         var mobileMenuBar = $("#header .mobile");
         var mobileMenu = $("#header .mobile-menu")
+        var i = 0;
+        var mobileSideMenu = [];
+
 
         setTimeout(resizeFn,100);
 
@@ -53,17 +56,63 @@ var hongo = {
             resizeFn();
         });
 
-
-
         mobileMenuBar.on({
             click:function(){
-                mobileMenu.slideDown(500);
-                $(this).addClass("addClose");
+                if(i==0){
+                    i=1;
+                    mobileMenu.slideDown(500);
+                    $(this).addClass("addClose");
+                }
+                else{
+                    i=0;
+                    mobileMenu.slideUp(500);
+                    $(this).removeClass("addClose");
+                }
             }
-        })
-        
+            })
 
-
+            $(".mobile-menu strong").eq(0).on({
+                click:function(){
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(0).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(0).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(1).on({
+                click:function(){
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(1).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(1).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(2).on({
+                click:function(){
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(2).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(2).slideUp(200);
+                    }
+                }
+            })
 
 
         aside4Btn1AndSide1.on({
