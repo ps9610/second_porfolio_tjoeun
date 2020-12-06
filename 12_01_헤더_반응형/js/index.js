@@ -57,7 +57,8 @@ var hongo = {
         });
 
         mobileMenuBar.on({
-            click:function(){
+            click:function(e){
+                e.preventDefault();
                 if(i==0){
                     i=1;
                     mobileMenu.slideDown(500);
@@ -86,7 +87,8 @@ var hongo = {
                 }
             })
             $(".mobile-menu strong").eq(1).on({
-                click:function(){
+                click:function(e){
+                    e.preventDefault();
                     if(i==0){
                         i=1;
                         $(this).prev().css({color:("#8d8d8d")});
@@ -100,7 +102,8 @@ var hongo = {
                 }
             })
             $(".mobile-menu strong").eq(2).on({
-                click:function(){
+                click:function(e){
+                    e.preventDefault();
                     if(i==0){
                         i=1;
                         $(this).prev().css({color:("#8d8d8d")});
@@ -110,6 +113,68 @@ var hongo = {
                         i=0;
                         $(this).prev().css({color:("#fff")});
                         $(".mobile-menu ul").eq(2).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(3).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(3).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(3).slideUp(200);
+                    }
+                }
+            })
+            
+            $(".mobile-menu strong").eq(4).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(4).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(4).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(5).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(5).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(5).slideUp(200);
+                    }
+                }
+            })
+            
+            $(".mobile-menu strong").eq(6).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(6).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(6).slideUp(200);
                     }
                 }
             })
