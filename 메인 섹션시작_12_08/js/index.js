@@ -294,15 +294,16 @@ var hongo = {
                 htmlRoot.removeClass("addScroll");
             }
         });
-    },*/
-    
+    },
+        */
+
     section01Fn : function(){
-    $("#section01").on({
+    $("#section01 .li-bg").on({
         mousemove : function(event){
-            $(this).css({backgroundPosition: -event.clientX*0.05+"px " + -event.clientY*0.05+"px"},1000,"swing")  
+            $(this).css({backgroundPosition: -event.clientX*0.025+"px " + -event.clientY*0.025+"px"},1000,"swing")  
         },
         mouseleave : function(event){
-            $(this).css({backgroundPosition: event.clientX*0.05+"px " + event.clientY*0.05+"px"},1000,"swing")
+            $(this).css({backgroundPosition: event.clientX*0.025+"px " + event.clientY*0.025+"px"},1000,"swing")
         }
     })
    },

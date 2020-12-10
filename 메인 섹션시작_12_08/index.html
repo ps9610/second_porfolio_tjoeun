@@ -62,7 +62,7 @@
 <div id="wrap">
     <main id="main">
         <section id="section01"> <!-- section01안에 header가 들어가있음 -->
-            <header id="header"> <!-- width:100%;1903px -->
+        <header id="header"> <!-- width:100%;1903px -->
         <div class="gap"> <!-- padding 35px 1833px padding 35px -->
             <div class="content fixedclear"> <!-- width:1833px -->
                 <div class="logo">
@@ -1576,18 +1576,110 @@
                 <!-- 기존 배경은 background:#29221f; 
                 슬라이드 left로 애니메이트 되면서 배경이 오고.
                 fadeIN/OUT 효과로 시계가 나타난다 -->
-                <div class="bg-wrap"></div>
                 <div class="slide-container">
                     <div class="slide-view">
                         <ul class="slide-wrap fixedclear">
-                            <li class="slide slide0"><img src="./img/watch-0011.jpg" alt=watch-0011""></li>
-                            <li class="slide slide1"><img src="./img/watch-003.jpg" alt="watch-003"></li>
-                            <li class="slide slide2"><img src="./img/watch-002.jpg" alt="watch-002"></li>
+                            <li class="slide slide0">
+                                <div class="li-bg"> <!-- 마우스무브 효과를 줄 배경이미지 -->
+                                    <div class="content-wrap"> <!-- 컨텐츠박스 -->
+                                        <div class="content-gap fixedclear">
+                                            <span class="image-wrap"><img src="./img/watch-0011.jpg" alt="watch-0011">
+                                            </span>
+                                            <span class="text-wrap">
+                                                <span class="h-line">
+                                                    <i></i>
+                                                </span>
+                                                <h4>LES ORIGINALES</h4>
+                                                <h2>High quality<br>stylish watches</h2>
+                                                <p>Made from 316L stainless steel, this classic is<br> intended to stay as such and is designed.</p>
+                                                <span class="collect-btn"><a href="javascript:" title="Go To OUR COLLECTION">OUR COLLECTION</a></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide slide1">
+                                <div class="li-bg">
+                                    <div class="content-wrap">
+                                        <div class="content-gap fixedclear">
+                                            <span class="image-wrap"><img src="./img/watch-003.jpg" alt="watch-003">
+                                            </span>
+                                            <span class="text-wrap">
+                                                <span class="h-line">
+                                                    <i></i>
+                                                </span>
+                                                <h4>LES ORIGINALES</h4>
+                                                <h2>Spending time<br> you feel great</h2>
+                                                <p>Made from 316L stainless steel, this classic is<br> intended to stay as such and is designed.</p>
+                                                <span class="collect-btn"><a href="javascript:" title="Go To OUR COLLECTION">OUR COLLECTION</a></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slide slide2">
+                                <div class="li-bg">
+                                    <div class="content-wrap">
+                                        <div class="content-gap fixedclear">
+                                            <div class="image-wrap">
+                                                <img src="./img/watch-002.jpg" alt="watch-002">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <span class="h-line">
+                                                    <i></i>
+                                                </span>
+                                                <h4>LES ORIGINALES</h4>
+                                                <h2>Hongo of your<br> time a planet</h2>
+                                                <p>Made from 316L stainless steel, this classic is<br> intended to stay as such and is designed.</p>
+                                                <span class="collect-btn"><a href="javascript:" title="Go To OUR COLLECTION">OUR COLLECTION</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
+                        <div class="page-wrap">
+                            <ul>
+                                <li><span><a href="javascript:" title="page button 01" class="page-btn0 addpageBtn">01<i></i></a></span></li>
+                                <li><span><a href="javascript:" title="page button 02" class="page-btn1">02<i></i></a></span></li>
+                                <li><span><a href="javascript:" title="page button 03" class="page-btn2">03<i></i></a></span></li>
+                            </ul>
+                        </div>
+                        <!--
+                        <div class="sns-wrap">
+                            <span class="i-facebook"><a href="javascript:"><i class="fab fa-facebook-f"></a></span>
+                            <span class="i-twitter"><a href="javascript:"><i class="fab fa-twitter"></i></a></span>
+                            <span class="i-google"><a href="javascript:"><i class="fab fa-google-plus-g"></i></a></span>
+                            <span class="i-linkedin"><a href="javascript:"><i class="fab fa-linkedin-in"></i></a></span>
+                            <span><i></i></span>
+                            <span>Follow us</span>
+                        </div>
+                        -->
                     </div>
                 </div>
         </section>
-        <section id="section02"></section>
+        <section id="section02">
+            <div class="wrap">
+                <div class="gap">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <div class="txt-wrap"><i class="fas fa-globe"></i><span>WORLDWIDE SHIPPING</span></div>
+                            </li>
+                            <li>
+                                <div class="txt-wrap"><i class="fas fa-certificate"></i><span>CERTIFICATED BY GURUS</span></div>
+                            </li>
+                            <li>
+                                <div class="txt-wrap"><i class="fas fa-money-check-alt"></i><span>30 DAYS MONEY BACK</span></div>
+                            </li>
+                            <li>
+                                <div class="txt-wrap"><i class="far fa-smile"></i><span>99% POSITIVE FEEDBACKS</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="section03"></section>
         <section id="section04"></section>
         <section id="section05"></section>
@@ -1628,6 +1720,17 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="quick">
+        <div><span class="cart"><i class="fas fa-cart-plus"></i></span></div>
+        <div><span class="mail"><i class="fas fa-mail-bulk"></i></span></div>
+        <div><span class="h-cart"><a href="javascript:" title="Go to Buy Theme"><i class="fas fa-cart-plus"></i>Buy Theme</a></span></div>
+        <div><span class="h-mail"><a href="javascript:" title="Go to Quick Question?"><i class="fas fa-mail-bulk"></i>Quick Question?</a></span></div>
+    </div>
+
+    <div class="goTop">
+        <span><a href="#section01">SCROLL UP<i class="fas fa-arrow-right"></i></a></span>
     </div>
 
     <script src="./js/index.js"></script>
