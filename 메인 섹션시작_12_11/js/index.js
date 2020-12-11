@@ -14,54 +14,46 @@ var hongo = {
         var simpleHeartMenu = $("#header .simple-menu li").eq(2);
         var t=0;
         var menuWrap = $("#header .menu-wrap");
+        var aside4Btn1AndSide1 = $("#header .aside4-btn1, #header .aside-side1");
         var asideSide1 = $("#header .aside-side1");
-        var asideSide2 = $("#header .aside-side2");
-        var asideSide3 = $("#header .aside-side3");
-        var aside4Btn1 = $("#header .aside4-btn1");
         var aside4Btn2 = $("#header .aside4-btn2");
+        var asideSide2 = $("#header .aside-side2");
         var aside4Btn3 = $("#header .aside4-btn3");
+        var asideSide3 = $("#header .aside-side3");
         var mobileMenuBar = $("#header .mobile");
         var mobileMenu = $("#header .mobile-menu")
         var i = 0;
         var _delta = null;
 
-        //mousewheel 스크롤 다운 = 헤더없어짐 / 스크롤 업 = 헤더 검정배경으로 생김
+     
         $("html,body").on("mousewheel DOMMouseScroll", function(event){
             event.preventDefault();
-            if(event.detail){ 
-                _delta = event.detail*(-1*40);   
+            if(event.detail){
+             _delta = event.detail*(-1*40);   
             }
             else{
                 _delta = event.originalEvent.wheelDelta;
             }
             if(_delta<0){
-                $("#header").stop().css({top:-100});
-                $(".goTop").fadeIn(500);
+                $("#header").css({top:-100});
             }
             else{
-                $("#header").stop().css({top:0});
-                $(".goTop").fadeOut(500);
+                $("#header").css({top:0});
             }
         })
 
         $(window).scroll(function(){
-            if( $(this).scrollTop() > $("#header").innerHeight() ){
+            if($(this).scrollTop()>$("#header").innerHeight()){
                 $("#header").addClass("addBackground");
             }
             else{
                 $("#header").removeClass("addBackground");
             }
         })
-
-        $(window).scroll(function(){
-            if( $(this).scrollTop() > $(window).offset().top ){
-                
-            }
-        })
             
-        // 화면 줄이면 헤더 오른쪽 하트 아이콘 없애기
         setTimeout(resizeFn,100);
 
+        // 화면 줄이면 헤더 오른쪽 하트 아이콘 없애기
         function resizeFn(){
             
             winW = $(window).innerWidth();
@@ -104,58 +96,132 @@ var hongo = {
                 else{
                     i=0;
                     mobileMenu.slideUp(500);
-                    mobileMenuBar.removeClass("addClose");
+                    $(this).removeClass("addClose");
                 }
             }
-        })
+            })
 
-        // 모바일 메뉴 -> 사이드 메뉴 보이게하기
-        $(".mobile-menu strong").each(function(index){
+            // 모바일 메뉴 사이드 메뉴 보이게하기
 
-            $(".mobile-menu strong").eq(index).on({
+            $(".mobile-menu strong").eq(0).on({
                 click:function(){
                     if(i==0){
                         i=1;
                         $(this).prev().css({color:("#8d8d8d")});
-                        $(".mobile-menu ul").eq(index).slideDown(500);
+                        $(".mobile-menu ul").eq(0).slideDown(500);
                     }
                     else{
                         i=0;
                         $(this).prev().css({color:("#fff")});
-                        $(".mobile-menu ul").eq(index).slideUp(200);
+                        $(".mobile-menu ul").eq(0).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(1).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(1).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(1).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(2).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(2).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(2).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(3).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(3).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(3).slideUp(200);
+                    }
+                }
+            })
+            
+            $(".mobile-menu strong").eq(4).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(4).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(4).slideUp(200);
+                    }
+                }
+            })
+            $(".mobile-menu strong").eq(5).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(5).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(5).slideUp(200);
+                    }
+                }
+            })
+            
+            $(".mobile-menu strong").eq(6).on({
+                click:function(e){
+                    e.preventDefault();
+                    if(i==0){
+                        i=1;
+                        $(this).prev().css({color:("#8d8d8d")});
+                        $(".mobile-menu ul").eq(6).slideDown(500);
+                    }
+                    else{
+                        i=0;
+                        $(this).prev().css({color:("#fff")});
+                        $(".mobile-menu ul").eq(6).slideUp(200);
                     }
                 }
             })
 
-        })
 
-        //모바일메뉴4번의 1, 10, 11번메뉴 fadein,out
-        $(".aside4Btn").each(function(idx){
-            $(this).eq(idx).on({
-                mouseenter : function(){
-                    $(this).$(".asideSideMenu").stop().fadeIn(400);
-                },
-                focusin:function(){
-                    $(this).$(".asideSideMenu").stop().fadeIn(400);
-                },
-                mouseleave:function(){
-                    $(this).$(".asideSideMenu").stop().fadeOut(400);
-                }
-            })
-        })
-                  
-        /*
-        $(".aside4Btn1").on({
+        aside4Btn1AndSide1.on({
             mouseenter:function(){
-                $(".asideSideMenu1").stop().fadeIn(400);
+                asideSide1.stop().fadeIn(400);
             },
             focusin:function(){
-                $(".asideSideMenu1").stop().fadeIn(400);
+                asideSide1.stop().fadeIn(400);
             }
         })
-        aside4Btn1.on({
+        aside4Btn1AndSide1.on({
             mouseleave : function(){
-                $(".asideSideMenu1").stop().fadeOut(400);
+                asideSide1.stop().fadeOut(400);
                 
             }
         })       
@@ -185,9 +251,9 @@ var hongo = {
             mouseleave : function(){
                 asideSide3.stop().fadeOut(400);
             }
-        })*/
+        })
         
-        //헤더 메뉴 하나씩 보이게하기
+         
         $(".li-wrap").on({
             mouseenter:function(){
                 $(".aside").stop().slideUp(0);
@@ -205,23 +271,10 @@ var hongo = {
             mouseleave:function(){
                 $(".aside").stop().slideUp(300);
             }
-        });
-
-        $(".cart").on("mouseenter",function(){
-            $(".h-cart").stop().animate({ right:0 },300);
-        })
-        $(".h-cart").on("mouseleave",function(){
-            $(this).stop().animate({ right:-200 },300);
-        })
-        $(".mail").on("mouseenter",function(){
-            $(".h-mail").stop().animate({ right:0 },300);
-        })
-        $(".h-mail").on("mouseleave",function(){
-            $(this).stop().animate({ right:-200 },300);
         })
     },
+
     /*
-    // 모달창
     modalFn : function(){
 
         var htmlRoot = $("html");
@@ -245,15 +298,14 @@ var hongo = {
         */
 
     section01Fn : function(){
-        //슬라이드 배경 포인터 반대쪽으로 자동이동시키기
-        $("#section01 .li-bg").on({
-            mousemove : function(event){
-                $(this).css({backgroundPosition: -event.clientX*0.025+"px " + -event.clientY*0.025+"px"},1000,"swing")  
-            },
-            mouseleave : function(event){
-                $(this).css({backgroundPosition: event.clientX*0.025+"px " + event.clientY*0.025+"px"},1000,"swing")
-            }
-        })
+    $("#section01 .li-bg").on({
+        mousemove : function(event){
+            $(this).css({backgroundPosition: -event.clientX*0.025+"px " + -event.clientY*0.025+"px"},1000,"swing")  
+        },
+        mouseleave : function(event){
+            $(this).css({backgroundPosition: event.clientX*0.025+"px " + event.clientY*0.025+"px"},1000,"swing")
+        }
+    })
    },
 
 

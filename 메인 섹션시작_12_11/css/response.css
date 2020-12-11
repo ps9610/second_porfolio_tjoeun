@@ -5,10 +5,6 @@
     #main #section01 #header .gap {padding:0;transition:padding .3s;}
 }
 
-@media all and (max-width:992px){
-    .quick {display:none;}
-}
-
 @media all and (max-width:767px){
     #main #section01 #header .gap .content .logo {width:33.3333333%;}
     #main #section01 #header .gap .content .logo .logo-gap {padding:0;padding-left:15px;}
