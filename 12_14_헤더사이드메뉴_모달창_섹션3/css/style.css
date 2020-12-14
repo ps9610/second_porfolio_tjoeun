@@ -227,11 +227,11 @@
 #main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li > div > a:focus > i {color:rgba(255, 255, 255, .6);}
 #main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li > div > a > div {padding-right:12px;}
 #main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li > div > a > div > span {display:inline-block;width:16px;padding:3px 0;font-size:10px;text-align:center;color:#fff;font-weight:600;position:absolute;top:-8px;right:-10px;background:#232323;border-radius:50%;}
-#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list {position:absolute;top:20px;right:0;width:210px;}
-#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap {padding:25px;background:#8d8d8d;}
-#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap .list-content {width:100%;color:#fff;}
-#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap .list-content > i {display:block;width:25px;height:25px;}
-#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap .list-content > span {display:block;}
+#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list {display:none;position:absolute;top:42px;right:-25px;width:260px;}
+#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap {padding:25px;background:#1c1c1c;}
+#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap .list-content {width:100%;color:#8d8d8d;text-align:center;}
+#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap .list-content > i {display:block;width:25px;font-size:22px;line-height:30px;margin:0 auto;}
+#main #section01 #header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div > a .list .gap .list-content > span {display:inline-block;text-align:center;padding-top:10px;font-size:11px;}
 
 .search-modal {display:none;z-index:4;position:absolute;top:0;left:-14px;width:100%;height:100%;max-height:460px;}
 .search-modal:after {z-index:3;content:"";display:block;position:absolute;top:-130px;left:0;width:100%;height:100%;padding:600px 30px 400px 30px;background:url("../img/watch-shop-header-bg.jpg") no-repeat 50% 50%;background-size:cover;}
@@ -273,8 +273,8 @@
 #main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap > p {padding-bottom:35px;line-height:20px;color:#77716c;font-size:15px;}
 #main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap .collect-btn {display:block;}
 #main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap .collect-btn > a {display:inline-block;padding:5px 26px;line-height:18px;color:#cca47e;border:2px solid #cca47e;font-size:11px;border-radius:20px;transition:all .3s;}
-#main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap .collect-btn > a:hover {color:#fff;border:2px solid #cca47e;background:#cca47e;}
-#main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap .collect-btn > a:focus {color:#fff;border:2px solid #cca47e;background:#cca47e;}
+#main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap .collect-btn:hover > a {color:#fff;border:2px solid #cca47e;background:#cca47e;}
+#main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap .collect-btn:focus > a {color:#fff;border:2px solid #cca47e;background:#cca47e;}
 
 /* 슬라이드 페이지버튼 */
 #main #section01 .slide-container .slide-view .page-wrap {position:absolute;top:42%;right:50px;}
@@ -302,18 +302,47 @@
 #main #section01 .slide-container .slide-view .sns-wrap > div:nth-child(6) {transform:rotate(270deg);margin-top:45px;}
 #main #section01 .slide-container .slide-view .sns-wrap > div:nth-child(6) .follow-txt {display:block;position:relative;top:-34px;letter-spacing:1px;font-size:12px;color:#77716c;font-weight:600;text-transform:uppercase;}
 
-
-
-#main #section02 {width:100%;padding:60px 0;background:transparent;}
+#main #section02 {width:100%;padding:60px 0;background:transparent;margin-top:50px;opacity:0;transition:all .6s;}
+#main #section02.addEvent {margin-top:0;opacity:1}
 #main #section02 .wrap {width:100%;max-width:1200px;margin:0 auto;}
 #main #section02 .wrap .gap {width:100%;}
 #main #section02 .wrap .gap .content {width:100%;text-align:center;}
 #main #section02 .wrap .gap .content > ul {width:100%;}
 #main #section02 .wrap .gap .content > ul > li {width:25%;float:left;font-size:13px;color:#808080;}
+#main #section02 .wrap .gap .content > ul > li:hover {animation:sec2Ani .9s ease-in-out;}
+@keyframes sec2Ani{
+    0% {transform:rotateY(0deg);}
+    50% {transform:rotateY(180deg);}
+    100% {transform:rotateY(0deg);}
+}
 #main #section02 .wrap .gap .content > ul > li > i {display:inline-block;padding-right:20px;}
 #main #section02 .wrap .gap .content > ul > li > span {display:inline-block;}
 
-#main #section03 {width:100%;height:321.141px;padding:65px 0 45px 0;background:#fff;}
+#main #section03 {width:100%;}
+#main #section03 .wrap {width:100%;}
+#main #section03 .wrap .content {width:100%;height:100%;}
+#main #section03 .wrap .content > ul {width:100%;height:100%;}
+#main #section03 .wrap .content > ul > li {float:left;width:25%;text-align:center;}
+#main #section03 .wrap .content > ul > li:nth-child(1) {background:url(../img/watch-banner-05-new.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .content > ul > li:nth-child(4) {background:url(../img/watch-banner-04.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .content > ul > li:nth-child(1) > div,
+#main #section03 .wrap .content > ul > li:nth-child(4) > div {padding:13.6% 14.893617% 9.5%;height:100%;max-height:321.141px;}
+#main #section03 .wrap .content > ul > li:nth-child(1) > div > h2 {color:#fff;font-size:12px;line-height:24px;}
+#main #section03 .wrap .content > ul > li:nth-child(4) > div > h2 {color:#cca47d;font-size:12px;line-height:24px;}
+#main #section03 .wrap .content > ul > li:nth-child(1) > div > a,
+#main #section03 .wrap .content > ul > li:nth-child(4) > div > a {display:block;}
+#main #section03 .wrap .content > ul > li:nth-child(1) > div > a > span {display:block;font-size:22px;color:#020202;line-height:24px;font-weight:300;}
+#main #section03 .wrap .content > ul > li:nth-child(4) > div > a > span {display:block;font-size:22px;color:#fff;line-height:24px;font-weight:300;}
+
+#main #section03 .wrap .content > ul > li:nth-child(2) {background:url(../img/watch-banner-02-new.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .content > ul > li:nth-child(2) > div {padding:13.6% 0 9.5%;height:100%;max-height:321.141px;text-align:center;position:relative;}
+#main #section03 .wrap .content > ul > li:nth-child(2) > div > a {transform:scale(1);display:inline-block;margin:27% auto;width:100%;max-width:65px;height:100%;max-height:65px;border-radius:50%;border:4px solid #fff;line-height:65px;}
+#main #section03 .wrap .content > ul > li:nth-child(2) > div > a:hover {transform:scale(1.2);}
+#main #section03 .wrap .content > ul > li:nth-child(2) > div > a > i {font-size:25px;color:#fff;display:inline-block;}
+
+#main #section03 .wrap .content > ul > li:nth-child(3) {background:url(../img/watch-banner-06-new.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .content > ul > li:nth-child(3) > a {display:block;padding:13.6% 0 9.5%;height:100%;max-height:321.141px;}
+
 #main #section04 {width:100%;height:1026.590px;padding:130px;background:transparent;}
 #main #section05 {width:100%;height:240.062px;padding:100px 0;background:#fff;}
 #main #section06 {width:100%;height:1009.390px;padding:130px 0;background:transparent;}

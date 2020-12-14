@@ -8,7 +8,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Title" content="Hongo – Modern & Multipurpose WooCommerce WordPress Theme – Home Page Watch">
     <meta name="Publisher" content="프론트엔드 박소혜">
-    <meta name="Author-date" content="2020-12-12"> 
+    <meta name="Author-date" content="2020-12-14"> 
     <meta name="Author" content="Hongo – Modern & Multipurpose WooCommerce WordPress Theme">
     <meta name="Copyright" content="HONGO is Proudly Powered by ThemeZaa">
     <meta name="Keywords" content="creative, modern, clean, bootstrap responsive, WordPress theme, drag & drop page builder, revolution slider, html5, css3, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, wpml, Yoast SEO, masonry, grid, coming soon, faq">
@@ -61,7 +61,8 @@
 </ul>
 <div id="wrap">
     <main id="main">
-        <section id="section01"> <!-- section01안에 header있음 -->
+        <section id="section01" class="wheelEvent"> <!-- section01안에 header있음 -->
+        <h2 class="hide">섹션1</h2>
         <header id="header"> <!-- width:100%;1903px -->
         <div class="gap"> <!-- padding 35px 1833px padding 35px -->
             <div class="content fixedclear"> <!-- width:1833px -->
@@ -1557,13 +1558,13 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div><a href="javascript:" title="Icon User"><i class="fas fa-user"></i></a></div>
+                                    <div><a href="https://hongo.themezaa.com/watch/my-account/" title="My Account"><i class="fas fa-user"></i></a></div>
                                 </li>
                                 <li>
-                                    <div><a href="javascript:" title="Icon Heart"><i class="far fa-heart"></i></a></div>
+                                    <div><a href="https://hongo.themezaa.com/watch/wishlist/" title="My Wishlist"><i class="far fa-heart"></i></a></div>
                                 </li>
                                 <li>
-                                    <div><a href="javascript:" title="Icon Shopping Cart">
+                                    <div class="shopping-cart"><a href="javascript:" title="Icon Shopping Cart">
                                             <i class="fas fa-shopping-cart"></i>
                                             <div><span>0</span></div>
                                             <div class="list">
@@ -1668,7 +1669,8 @@
                     </div>
                 </div>
         </section>
-        <section id="section02">
+        <section id="section02" class="wheelEvent">
+            <h2 class="hide">섹션2</h2>
             <div class="wrap">
                 <div class="gap">
                     <div class="content">
@@ -1689,30 +1691,52 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="section03">
+        </section>    
+        <section id="section03" class="wheelEvent">
+            <h2 class="hide">섹션3</h2>
             <div class="wrap">
                 <div class="content">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="fixedclear">
+                        <li class="sec3txt"><div>
+                            <h2>OUR COLLECTION</h2>
+                            <a href="https://hongo.themezaa.com/watch/shop" title="Go to Hongo Watch Shop">
+                                <span>High quality and<br>good design shape</span>
+                            </a>
+                        </div></li>
+                        <li class="video-wrap"><div>
+                            <a href="#video-modal" class="play-btn" title="Play Button"><i class="fas fa-play"></i></a>
+                        </div></li>
+                        <li><a href="https://hongo.themezaa.com/watch/shop" title="100% satisfaction guarantee"></a></li>
+                        <li class="sec3txt"><div>
+                            <h2>ABOUT ROTARY</h2>
+                            <a href="https://hongo.themezaa.com/watch/shop">
+                                <span>Designing watches<br>full time work</span>
+                            </a>
+                        </div></li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section id="section04">
-            
+        <section id="section04" class="wheelEvent">
+        <h2 class="hide">섹션4</h2>
         </section>
-        <section id="section05"></section>
-        <section id="section06"></section>
-        <section id="section07"></section>
-        <section id="section08"></section>
-        <section id="section09"></section>
+        <section id="section05" class="wheelEvent">
+            <h2 class="hide">섹션5</h2>
+        </section>
+        <section id="section06" class="wheelEvent">
+            <h2 class="hide">섹션6</h2>
+        </section>
+        <section id="section07" class="wheelEvent">
+            <h2 class="hide">섹션7</h2>
+        </section>
+        <section id="section08" class="wheelEvent">
+            <h2 class="hide">섹션8</h2>
+        </section>
+        <section id="section09" class="wheelEvent">
+            <h2 class="hide">섹션9</h2>
+        </section>
     </main>
-    <footer id="footer">
-
+    <footer id="footer" class="wheelEvent">
     </footer>
 
     <div class="modal">
@@ -1746,7 +1770,6 @@
             </div>
         </div>
     </div>
-
     <div class="search-modal">
         <div class="search-wrap">
             <div class="gap">
@@ -1763,6 +1786,23 @@
                                 <span><i></i></span>
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="video-modal">
+        <div class="video-wrap">
+            <div class="gap">
+                <div class="content">
+                    <iframe src="https://www.youtube.com/embed/sU3FkzUKHXU?autoplay=1www.youtube.com/embed/sU3FkzUKHXU?autoplay=1" frameborder="0"></iframe>
+                </div>
+                <div class="close">
+                    <div class="close-wrap">
+                        <a href="javascript:" class="close-btn" title="close button">
+                            <span><i></i></span>
+                            <span><i></i></span>
+                        </a>
                     </div>
                 </div>
             </div>

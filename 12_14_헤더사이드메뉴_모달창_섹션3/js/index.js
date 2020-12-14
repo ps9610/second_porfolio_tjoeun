@@ -1,13 +1,50 @@
 ;(function(window,document,$,undefined){
-
+        /* $(), jQuery(); 
+        jQuery 는 생성자 함수다.
+        즉, jQuery 부모에 접근하여 모든 자식들이 상속받도록 하는 것이다. */
 var hongo = {
 
     init : function(){
         var that = this;
+            //that.scrollMoveFn();
             that.headerFn();
             that.section01Fn();
+            that.section02Fn();
+            that.section03Fn();
             //that.modalFn();
     },
+    /*scrollMoveFn : function(){
+
+        var _delta = null;
+        var _htmlBody = $("html, body");
+        var _wheelEvent = $(".wheelEvent");
+
+        _wheelEvent.each(function(i){
+            
+            $(this).on("mousewheel DOMMouseScroll", function(event){
+                event.preventDefault();
+                if(event.detail){
+                    _delta = event.detail*(-1*40);
+                }
+                else{
+                    _delta = event.originalEvent.wheelDelta;
+                }
+                if(_delta<0){
+                    if(i>2){
+                        _htmlBody.stop().animate({scrollTop : $(this).next().offset().top},800,"easeInOutSine");
+                        console.log(i);
+                    }
+                }
+                else{
+                    if(i>0){
+                        _htmlBody.stop().animate({scrollTop : $(this).prev().offset().top},800,"easeInOutSine");
+                    }
+                }
+
+            })
+        })
+    },*/
+        
     headerFn : function(){  
         var win_dow = $(window);
         var winW = $(window).innerWidth();
@@ -30,20 +67,17 @@ var hongo = {
         var url = null;
 
         var htmlRoot = $("html");
-
+        
+        
         //smooth-scrolling
         $(".smooth-btn").on("click",function(e){
             e.preventDefault();
                 url = $(this).attr("href");
                 $("html, body").stop().animate({ scrollTop:$(url).offset().top },800,"easeInOutCubic");
-                $(".goTop").fadeIn(500);
+                $(".goTop").fadeOut(500);
                 $("#header").stop().css({top:-100},1000);
         })
-
-        /* $(), jQuery(); 
-        jQuery 는 생성자 함수다.
-        즉, jQuery 부모에 접근하여 모든 자식들이 상속받도록 하는 것이다. */
-
+        
         //mousewheel 스크롤 다운 = 헤더없어짐 / 스크롤 업 = 헤더 검정배경으로 생김
         $("html,body").on("mousewheel DOMMouseScroll", function(event){
             event.preventDefault();
@@ -82,6 +116,16 @@ var hongo = {
             $(".search-modal").slideUp(200);
             htmlRoot.removeClass("addScroll");
             ("#header").show();
+        })
+
+        // 헤더; 장바구니 호버 시 팝업창 생성
+        $(".shopping-cart").on({
+            mouseenter : function(){
+            $(".list").fadeIn(400);
+            },
+            mouseleave : function(){
+                $(".list").fadeOut(400);
+            }
         })
 
         // 헤더 반응형 -> 오른쪽 하트 아이콘 없애기
@@ -320,10 +364,84 @@ var hongo = {
         $(window).resize(function(){
             resizeFn()
         })
-   },
+    },
+    section02Fn : function(){
+        
+        // parallax
+        setTimeout(sectionScrollFn,100);
 
+        function sectionScrollFn(){
 
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > $("#section02").offset().top-800 ){
+                    $("#section02").addClass("addEvent");
+                }
+                else{
+                    $("#section02").removeClass("addEvent");
+                }
+            })
+        }  
+    },
 
+    section03Fn : function(){
+
+        var _winW = $(window).innerWidth();
+        var fontH2 = $(".sec3txt h2");
+        var fontSpan = $(".sec3txt span");
+
+        var h2Rate = 0.025263158;
+        var spanRate = 0.046315789;
+        var lineHeightRate = 0.054419301;
+
+        var resizeFontH2 = sec3txtW*h2Rate;
+        var resizeFontSpan = sec3txtW*spanRate;
+        var resizeLineHeight = liHeight*lineHeightRate; 
+
+        var sec3txtW = $(".sec3txt").innerWidth();
+        var section03Div = $("#section03 div, #section03 a");
+        var liHeight= sec3txtW*0.938340426;
+    
+        // li:nth-child(2) 재생버튼 호버시 background 커지기
+
+        //반응형 폰트조정
+        setTimeout(resizeFn(),100);
+        
+        function resizeFn(){
+            _winW = $(window).innerWidth();
+            fontH2 = $(".sec3txt h2");
+            fontSpan = $(".sec3txt span");
+        
+            h2Rate = 0.025263158;
+            spanRate = 0.046545184;
+            h2LineHeightRate = 0.037236147;
+            spanLineHeightRate = 0.05585422;
+        
+            resizeFontH2 = sec3txtW*h2Rate;
+            resizeFontSpan = sec3txtW*spanRate;
+            resizeH2LineHeight = liHeight*h2LineHeightRate;
+            resizeSpanLineHeight = liHeight*spanLineHeightRate;
+        
+            sec3txtW = $(".sec3txt").innerWidth();
+            section03Div = $("#section03 div, #section03 a");
+            liHeight= sec3txtW*0.789404255;
+        
+            section03Div.css({height : liHeight});
+            fontH2.css({fontSize : resizeFontH2, lineHeight:resizeH2LineHeight+"px", marginBottom:10});
+            fontSpan.css({fontSize : resizeFontSpan, lineHeight:resizeSpanLineHeight+"px"});
+
+            if(_winW < 992){
+                section03Div.css({height : sec3txtW});
+            }
+            if(_winW < 768){
+                fontH2.css({fontSize : resizeFontH2, lineHeight:resizeH2LineHeight+"px", marginBottom:10});
+                fontSpan.css({fontSize : resizeFontSpan, lineHeight:resizeSpanLineHeight+"px"});
+            }
+        }
+        
+        $(window).resize(function(){
+            resizeFn();
+        })
+    }    
 }
 
 hongo.init();
