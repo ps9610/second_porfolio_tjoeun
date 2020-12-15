@@ -6,22 +6,25 @@ var hongo = {
 
     init : function(){
         var that = this;
-            //that.scrollMoveFn();
+            that.scrollMoveFn();
             that.headerFn();
             that.section01Fn();
             that.section02Fn();
             that.section03Fn();
+            that.section06Fn();
             //that.modalFn();
     },
-    /*scrollMoveFn : function(){
+    scrollMoveFn : function(){
+        // 📌마우스 포인터가 화면 위(헤더 가까이)에 있으면 휠이벤트 작동하지만, 화면 밑쪽에 있으면 잘 작동하지 않음
 
         var _delta = null;
         var _htmlBody = $("html, body");
         var _wheelEvent = $(".wheelEvent");
+        var n = _wheelEvent.length;
 
         _wheelEvent.each(function(i){
-            
             $(this).on("mousewheel DOMMouseScroll", function(event){
+                
                 event.preventDefault();
                 if(event.detail){
                     _delta = event.detail*(-1*40);
@@ -30,20 +33,32 @@ var hongo = {
                     _delta = event.originalEvent.wheelDelta;
                 }
                 if(_delta<0){
-                    if(i>2){
-                        _htmlBody.stop().animate({scrollTop : $(this).next().offset().top},800,"easeInOutSine");
-                        console.log(i);
+                    if(i<n-1){  
+                        if(i==n-2){
+                            _htmlBody.stop().animate({scrollTop : $("#footer").offset().top},800);
+                        }
+                        else{
+                            if(!_htmlBody.is(":animated")){
+                                _htmlBody.stop().animate({scrollTop : $(this).next().offset().top},800);
+                            }
+                        }
                     }
                 }
                 else{
                     if(i>0){
-                        _htmlBody.stop().animate({scrollTop : $(this).prev().offset().top},800,"easeInOutSine");
+                        if(i==9){
+                            _htmlBody.stop().animate({scrollTop : $("#section09").offset().top},800);
+                        }
+                        else{
+                            if(!_htmlBody.is(":animated")){
+                            _htmlBody.stop().animate({scrollTop : $(this).prev().offset().top},800);
+                            }
+                        }
                     }
                 }
-
             })
         })
-    },*/
+    },
         
     headerFn : function(){  
         var win_dow = $(window);
@@ -365,6 +380,7 @@ var hongo = {
             resizeFn()
         })
     },
+
     section02Fn : function(){
         
         // parallax
@@ -373,7 +389,7 @@ var hongo = {
         function sectionScrollFn(){
 
             $(window).scroll(function(){
-                if( $(window).scrollTop() > $("#section02").offset().top-800 ){
+                if( $(window).scrollTop() > $("#section02").offset().top-120 ){
                     $("#section02").addClass("addEvent");
                 }
                 else{
@@ -432,16 +448,76 @@ var hongo = {
             if(_winW < 992){
                 section03Div.css({height : sec3txtW});
             }
-            if(_winW < 768){
-                fontH2.css({fontSize : resizeFontH2, lineHeight:resizeH2LineHeight+"px", marginBottom:10});
-                fontSpan.css({fontSize : resizeFontSpan, lineHeight:resizeSpanLineHeight+"px"});
-            }
         }
         
         $(window).resize(function(){
             resizeFn();
         })
-    }    
+    },
+    section06Fn : function(){
+        
+        //페이드 인 아웃, 페이지네이션 포함 슬라이드 구현
+        var n = $(".slide").length-1;
+        var cnt = 0;
+
+        setTimeout(nextCountFn, 1000);
+
+        //function mainPrevSildeFn(){
+        //    $(".slide").css({zIndex:1}).stop().animate({opacity:1},0);
+        //    $(".slide").eq().css({zIndex:2});
+        //    $(".slide").eq().css({zIndex:3}).stop().animate({opacity:1},0).animate({opacity:0},800)
+        //    pageBtnFn(cnt);
+        //}
+
+        function mainNextSildeFn(){
+            $(".slide").css({zIndex:1}).stop().animate({opacity:1},0); //초기화 상태/모든 슬라이드 z-index 겹쳐놓고 준비
+            $(".slide").eq(cnt==n? 0:cnt+1).css({zIndex:2});//현재 진행중인 슬라이드
+            $(".slide").eq(cnt).css({zIndex:3}).stop().animate({opacity:0},0).animate({opacity:1},500); //다음에 올 슬라이드
+            pageBtnFn(cnt);
+        }
+
+        /* function prevCountFn(){
+            cnt--;
+            if(cnt<0){cnt=2}
+            mainPrevSildeFn();
+        } */
+         function nextCountFn(){
+            cnt++;
+            if(cnt>n){cnt=0}
+            mainNextSildeFn();
+
+        }
+
+        function pageBtnFn(z){
+            $(".pageBtn").removeClass("addPage");
+            $(".pageBtn").eq(z).addClass("addPage");
+        }
+
+        $(".pageBtn").each(function(idx){
+            $(this).on({
+                click : function(){
+                    cnt = idx;
+                    //mainPrevSildeFn();
+                    mainNextSildeFn();
+                }
+            })
+        })
+
+        $(".slide").swipe({
+            swipeLeft : function(e){
+                e.preventDefault();
+                nextCountFn();
+            },
+            swipeRight : function(e){
+                e.preventDefault();
+                prevCountFn();
+            }
+        })
+    }
+
+
+
+
 }
 
 hongo.init();
