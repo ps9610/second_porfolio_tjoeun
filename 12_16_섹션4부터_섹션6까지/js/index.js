@@ -513,17 +513,7 @@ var hongo = {
                 prevCountFn();
             }
         })
-
-        //왼쪽 사진 호버시 addClass
-        $(".left-image").on({
-            mouseenter : function(){
-                $(".cart-btn").addClass("addHover");
-            },
-            mouseleave :function(){
-                $(".cart-btn").removeClass("addHover")
-            }
-        })
-    },
+    }
 
 
 
