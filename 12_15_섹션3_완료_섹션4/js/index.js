@@ -11,6 +11,7 @@ var hongo = {
             that.section01Fn();
             that.section02Fn();
             that.section03Fn();
+            that.section04Fn();
             that.section06Fn();
             //that.modalFn();
     },
@@ -401,6 +402,21 @@ var hongo = {
 
     section03Fn : function(){
 
+        // parallax
+        setTimeout(sectionScrollFn,100);
+
+        function sectionScrollFn(){
+
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > $("#section03").offset().top-120 ){
+                    $("#section03").addClass("addEvent");
+                }
+                else{
+                    $("#section03").removeClass("addEvent");
+                }
+            })
+        }
+
         var _winW = $(window).innerWidth();
         var fontH2 = $(".sec3txt h2");
         var fontSpan = $(".sec3txt span");
@@ -454,8 +470,43 @@ var hongo = {
             resizeFn();
         })
     },
+
+    section04Fn : function(){
+
+        // parallax
+        setTimeout(sectionScrollFn,100);
+
+        function sectionScrollFn(){
+
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > $("#section04").offset().top-120 ){
+                    $("#section04").addClass("addEvent");
+                }
+                else{
+                    $("#section04").removeClass("addEvent");
+                }
+            })
+        }
+
+        $("#section04 .content").each(function(idx){
+            $(this).on({
+                mouseenter : function(){
+                    console.log(idx)
+                    $("#section04 .content").eq(idx).find("img").attr("src","./img/watch-home-feature-products-"+ idx +"-a-768x979.jpg");
+                    //console.log("src","./img/watch-home-feature-products-"+ idx +"-a-768x979.jpg")
+                    $(".button-wrap").eq(idx).stop().animate({top:0},300);
+                },
+                mouseleave : function(){
+                    $("#section04 .content").eq(idx).find("img").attr("src","./img/watch-home-feature-products-"+ idx +"-768x979.jpg");
+                    $(".button-wrap").eq(idx).stop().animate({top:50},300);
+                }
+            })
+        })
+
+    },
+
     section06Fn : function(){
-        
+
         //왼쪽 사진 호버시 animate
         $(".blacktop, .blacktop-btn").on("mouseenter",function(){
             $(".blacktop-cart").stop().animate({top:340, opacity:1},400);
@@ -498,6 +549,20 @@ var hongo = {
             $(".coronada-white1").stop().animate({bottom:-50, opacity:0},700);
             $(this).find("img").attr("src","./img/watch-home-best-seller-products-04-768x490.jpg")
             });
+
+        $(".monochrome, .cart-btn").on("mouseenter",function(){
+            $(".monochrome-cart").stop().animate({bottom:100, opacity:1},400);
+            $(".monochrome-white2").stop().animate({bottom:0, opacity:1},500);
+            $(".monochrome-white1").stop().animate({bottom:0, opacity:1},700);
+            $(this).find("img").attr("src","./img/watch-home-best-seller-products-03-a-768x979.jpg")
+            })
+        
+        $(".monochrome").on("mouseleave",function(){
+            $(".monochrome-cart").stop().animate({bottom:0, opacity:0},400);
+            $(".monochrome-white2").stop().animate({bottom:-50, opacity:0},500);
+            $(".monochrome-white1").stop().animate({bottom:-50, opacity:0},700);
+            $(this).find("img").attr("src","./img/watch-home-best-seller-products-03-768x979.jpg")
+            });    
         
     },
 
