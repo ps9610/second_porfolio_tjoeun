@@ -369,21 +369,27 @@
 #main #section04 .wrap .container .gap .content:hover > div .txt-wrap {transform:translateY(-40px);background:#fff;}
 #main #section04 .wrap .container .gap .content > div .txt-wrap > a:hover {color:#b88b5f;}
 
+#main #section05 {width:100%;}
+#main #section05 .wrap {width:100%;}
+#main #section05 .wrap .left-wrap {float:left;width:33.3333333%;}
+#main #section05 .wrap .left-wrap > a {display:block;width:100%;}
+#main #section05 .wrap .left-wrap > a > img {display:block;width:100%;}
+#main #section05 .wrap .right-wrap {float:left;width:66.6666667%;background:url(../img/graphic-banner-7.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section05 .wrap .right-wrap .gap {padding:100px 110px;}
+#main #section05 .wrap .right-wrap .gap .content {position:relative;width:100%;}/*제이쿼리 TOP값있음*/
+#main #section05 .wrap .right-wrap .gap .content > h2 {width:100%;margin-bottom:8px;line-height:20px;}
+#main #section05 .wrap .right-wrap .gap .content > h2 > i {display:inline-block;width:10px;height:2px;background:#b88b5f;}
+#main #section05 .wrap .right-wrap .gap .content > h2 > span {display:inline-block;font-size:12px;color:#b88b5f;}
+#main #section05 .wrap .right-wrap .gap .content > a {display:block;color:#f0f0f0;font-size:28px;line-height:33px;}
 
 
-
-
-
-
-#main #section05 {width:100%;height:240.062px;padding:100px 0;background:#fff;}
-
-#main #section06 {width:100%;height:auto;padding:130px 0;background:transparent;}
+#main #section06 {height:auto;padding:130px 228px;box-sizing:border-box;background:transparent;}
 #main #section06 .wrap {width:100%;}
-#main #section06 .wrap .gap {padding:0 228px;}
+#main #section06 .wrap .title-wrap {margin-bottom:65px;text-align:center;}
+#main #section06 .wrap .title-wrap > h2 {font-size:23px;color:#232323;font-weight:500;line-height:30px;}
+#main #section06 .wrap .title-wrap > h3 {font-size:14px;color:#808080;line-height:24px;}
+#main #section06 .wrap .gap {display:block;}
 #main #section06 .wrap .gap .content {width:100%;}
-#main #section06 .wrap .gap .content .title-wrap {text-align:center;margin-bottom:65px;}
-#main #section06 .wrap .gap .content .title-wrap > h2 {font-size:23px;color:#232323;font-weight:500;line-height:30px;}
-#main #section06 .wrap .gap .content .title-wrap > h3 {font-size:14px;color:#808080;line-height:24px;}
 #main #section06 .wrap .gap .content .left {float:left;width:50%;}
 #main #section06 .wrap .gap .content .left .left-wrap {width:100%;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap {padding:1.382170% 0;}
@@ -417,10 +423,11 @@
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .content > div > span {display:block;float:left;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .content > div > span > a {position:relative;opacity:0;display:inline-block;width:45px;background:#fff;line-height:45px;text-align:center;transition:background .4s;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .blacktop > div > span a.white-btn2 {bottom:405px;}
-#main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .voyager > div > span a.white-btn2 {bottom:405px;}
-#main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .coronada > div > span a.white-btn2 {bottom:0;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .blacktop > div > span a.white-btn1 {bottom:405px;}
+#main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .voyager > div > span a.white-btn2 {bottom:405px;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .voyager > div > span a.white-btn1 {bottom:405px;}
+#main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .coronada > div > span a.white-btn1 {bottom:-100px;}
+#main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .coronada > div > span a.white-btn2 {bottom:-100px;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .content > div > span > a > i {width:13px;line-height:13px;font-size:13px;color:#818181;transition:color .4s;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .content > div > span > a:hover {background:#000;}
 #main #section06 .wrap .gap .content .left .left-wrap .left-gap .left-content .content > div > span > a:hover > i {color:#fff;}
@@ -438,16 +445,16 @@
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome .right-image {display:block;max-width:696.125px;max-height:887.375px;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome .right-image > img {display:block;width:100%;height:100%;}
 
-#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome .cart-btn {z-index:2;position:absolute;bottom:100px;left:40px;opacity:0;line-height:20px;display:inline-block;padding:3px 20px;background:rgba(35,35,35,0.945);border:2px solid #232323;transition:background .5s;}
+#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome .cart-btn {z-index:2;position:absolute;bottom:-800px;left:40px;opacity:0;line-height:20px;display:inline-block;padding:3px 20px;background:rgba(35,35,35,0.945);border:2px solid #232323;transition:background .5s;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome .cart-btn > span {display:inline-block;color:rgb(241,241,241);font-size:10px;transition:color .5s}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome .cart-btn:hover {background:transparent;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome .cart-btn:hover > span {color:rgb(35, 35, 35);}
 
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div {z-index:2;display:inline-block;position:absolute;right:11px;bottom:0;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span {display:block;float:right;}
-#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a {position:relative;opacity:0;display:inline-block;width:45px;background:#fff;line-height:45px;text-align:center;transition:background .4s;}
-#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span a.white-btn2 {bottom:405px;}
-#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span a.white-btn1 {bottom:405px;}
+#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a {position:relative;opacity:1;display:inline-block;width:45px;background:#fff;line-height:45px;text-align:center;transition:background .4s;}
+#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span a.white-btn1 {bottom:-800px;}
+#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span a.white-btn2 {bottom:-800px;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a > i {width:13px;line-height:13px;font-size:13px;color:#818181;transition:color .4s;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a:hover {background:#000;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a:hover > i {color:#fff;}

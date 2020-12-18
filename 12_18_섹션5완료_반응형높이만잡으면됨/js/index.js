@@ -12,6 +12,7 @@ var hongo = {
             that.section02Fn();
             that.section03Fn();
             that.section04Fn();
+            that.section05Fn();
             that.section06Fn();
             //that.modalFn();
     },
@@ -491,7 +492,7 @@ var hongo = {
         $("#section04 .content").each(function(idx){
             $(this).on({
                 mouseenter : function(){
-                    console.log(idx)
+                    //console.log(idx)
                     $("#section04 .content").eq(idx).find("img").attr("src","./img/watch-home-feature-products-"+ idx +"-a-768x979.jpg");
                     //console.log("src","./img/watch-home-feature-products-"+ idx +"-a-768x979.jpg")
                     $(".button-wrap").eq(idx).stop().animate({top:0},300);
@@ -502,6 +503,19 @@ var hongo = {
                 }
             })
         })
+
+    },
+
+    section05Fn : function(){
+        var rightWrapW = $(".right-wrap .content").innerWidth();
+        var rightWrapH = rightWrapW * 0.228922625;
+        var contentH2 = $(".right-wrap .content h2").innerHeight();
+        var contentA = $(".right-wrap .content a").innerHeight();
+        var contentTop = rightWrapH-(contentH2+contentA);
+
+        
+        $(".right-wrap .content").css({height:rightWrapH});
+        $(".right-wrap .content").css({top:contentTop/2/* 59.461 */});
 
     },
 
@@ -522,7 +536,7 @@ var hongo = {
             $(this).find("img").attr("src","./img/watch-home-best-seller-products-01-768x979.jpg")
             });
 
-        $(".voyager, .cart-btn").on("mouseenter",function(){
+        $(".voyager, .voyager .cart-btn").on("mouseenter",function(){
             $(".voyager-cart").stop().animate({top:340, opacity:1},400);
             $(".voyager-white2").stop().animate({bottom:453, opacity:1},500);
             $(".voyager-white1").stop().animate({bottom:453, opacity:1},700);
@@ -536,7 +550,7 @@ var hongo = {
             $(this).find("img").attr("src","./img/watch-home-best-seller-products-02-768x979.jpg")
             });
 
-        $(".coronada, .cart-btn").on("mouseenter",function(){
+        $(".coronada, .coronada .cart-btn").on("mouseenter",function(){
             $(".coronada-cart").stop().animate({bottom:100, opacity:1},400);
             $(".coronada-white2").stop().animate({bottom:0, opacity:1},500);
             $(".coronada-white1").stop().animate({bottom:0, opacity:1},700);
@@ -545,22 +559,22 @@ var hongo = {
         
         $(".coronada").on("mouseleave",function(){
             $(".coronada-cart").stop().animate({bottom:0, opacity:0},400);
-            $(".coronada-white2").stop().animate({bottom:-50, opacity:0},500);
-            $(".coronada-white1").stop().animate({bottom:-50, opacity:0},700);
+            $(".coronada-white2").stop().animate({bottom:-100, opacity:0},500);
+            $(".coronada-white1").stop().animate({bottom:-100, opacity:0},700);
             $(this).find("img").attr("src","./img/watch-home-best-seller-products-04-768x490.jpg")
             });
 
-        $(".monochrome, .cart-btn").on("mouseenter",function(){
-            $(".monochrome-cart").stop().animate({bottom:100, opacity:1},400);
-            $(".monochrome-white2").stop().animate({bottom:0, opacity:1},500);
-            $(".monochrome-white1").stop().animate({bottom:0, opacity:1},700);
+        $(".monochrome, .monochrome .cart-btn").on("mouseenter",function(){
+            $(".monochrome-cart").stop().animate({bottom:-600, opacity:1},400);
+            $(".monochrome-white2").stop().animate({bottom:-648, opacity:1},500);
+            $(".monochrome-white1").stop().animate({bottom:-648, opacity:1},700);
             $(this).find("img").attr("src","./img/watch-home-best-seller-products-03-a-768x979.jpg")
             })
         
         $(".monochrome").on("mouseleave",function(){
-            $(".monochrome-cart").stop().animate({bottom:0, opacity:0},400);
-            $(".monochrome-white2").stop().animate({bottom:-50, opacity:0},500);
-            $(".monochrome-white1").stop().animate({bottom:-50, opacity:0},700);
+            $(".monochrome-cart").stop().animate({bottom:-800, opacity:0},400);
+            $(".monochrome-white2").stop().animate({bottom:-800, opacity:0},500);
+            $(".monochrome-white1").stop().animate({bottom:-800, opacity:0},700);
             $(this).find("img").attr("src","./img/watch-home-best-seller-products-03-768x979.jpg")
             });    
         
