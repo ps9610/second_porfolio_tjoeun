@@ -17,7 +17,6 @@ var hongo = {
             //that.modalFn();
     },
     scrollMoveFn : function(){
-        // 📌마우스 포인터가 화면 위(헤더 가까이)에 있으면 휠이벤트 작동하지만, 화면 밑쪽에 있으면 잘 작동하지 않음
 
         var _delta = null;
         var _htmlBody = $("html, body");
@@ -37,11 +36,12 @@ var hongo = {
                 if(_delta<0){
                     if(i<n-1){  
                         if(i==n-2){
-                            _htmlBody.stop().animate({scrollTop : $("#footer").offset().top},800);
+                            _htmlBody.stop().animate({scrollTop : $("#footer").offset().top-50},800);
                         }
                         else{
                             if(!_htmlBody.is(":animated")){
-                                _htmlBody.stop().animate({scrollTop : $(this).next().offset().top},800);
+                                _htmlBody.stop().animate({scrollTop : $(this).next().offset().top-50},800);
+                                console.log($("#section04").offset().top)
                             }
                         }
                     }
@@ -49,11 +49,11 @@ var hongo = {
                 else{
                     if(i>0){
                         if(i==9){
-                            _htmlBody.stop().animate({scrollTop : $("#section09").offset().top},800);
+                            _htmlBody.stop().animate({scrollTop : $("#section09").offset().top-50},800);
                         }
                         else{
                             if(!_htmlBody.is(":animated")){
-                            _htmlBody.stop().animate({scrollTop : $(this).prev().offset().top},800);
+                            _htmlBody.stop().animate({scrollTop : $(this).prev().offset().top-50},800);
                             }
                         }
                     }
@@ -91,8 +91,8 @@ var hongo = {
             e.preventDefault();
                 url = $(this).attr("href");
                 $("html, body").stop().animate({ scrollTop:$(url).offset().top },800,"easeInOutCubic");
-                $(".goTop").fadeOut(500);
-                $("#header").stop().css({top:-100},1000);
+                $(".goTop").stop().fadeOut(500);
+                $("#header").css({top:-100},1000);
         })
         
         //mousewheel 스크롤 다운 = 헤더없어짐 / 스크롤 업 = 헤더 검정배경으로 생김
@@ -106,11 +106,11 @@ var hongo = {
             }
             if(_delta<0){
                 $("#header").stop().css({top:-100});
-                $(".goTop").fadeIn(500);
+                $(".goTop").stop().fadeIn(500);
             }
             else{
                 $("#header").stop().css({top:0});
-                $(".goTop").fadeOut(500);
+                $(".goTop").stop().fadeOut(500);
                 
             }
         })
@@ -136,12 +136,12 @@ var hongo = {
         })
 
         // 헤더; 장바구니 호버 시 팝업창 생성
-        $(".shopping-cart").on({
+        $(".shopping-cart, .cartNum").on({
             mouseenter : function(){
-            $(".list").fadeIn(400);
+            $(".list").stop().fadeIn(400);
             },
             mouseleave : function(){
-                $(".list").fadeOut(400);
+                $(".list").stop().fadeOut(800);
             }
         })
 
@@ -159,15 +159,15 @@ var hongo = {
             if (winW < 992){
                 if(t==0){
                     t=1;
-                    simpleHeartMenu.fadeOut(0);
-                    menuWrap.fadeOut(0);
+                    simpleHeartMenu.stop().fadeOut(0);
+                    menuWrap.stop().fadeOut(0);
                     mobileMenuBar.show();
                 }
             }
             else{
                 t=0;
-                simpleHeartMenu.fadeIn(0);
-                menuWrap.fadeIn(0);
+                simpleHeartMenu.stop().fadeIn(0);
+                menuWrap.stop().fadeIn(0);
                 mobileMenuBar.hide();
                 $(".mobile-menu").hide();
 
@@ -196,17 +196,17 @@ var hongo = {
         })
 
         // 모바일 메뉴 -> 사이드 메뉴 보이게하기
-        $(".mobile-menu strong").each(function(index){
+        $(".sideMenuBtn").each(function(index){
 
-            $(".mobile-menu strong").eq(index).on({
+            $(this).on({
                 click:function(){
-                    if(i==0){
-                        i=1;
+                    if(i==1){
+                        i=0;
                         $(this).prev().css({color:("#8d8d8d")});
                         $(".mobile-menu ul").eq(index).slideDown(500);
                     }
                     else{
-                        i=0;
+                        i=1;
                         $(this).prev().css({color:("#fff")});
                         $(".mobile-menu ul").eq(index).slideUp(200);
                     }
@@ -391,7 +391,7 @@ var hongo = {
         function sectionScrollFn(){
 
             $(window).scroll(function(){
-                if( $(window).scrollTop() > $("#section02").offset().top-120 ){
+                if( $(window).scrollTop() > $("#section02").offset().top-140 ){
                     $("#section02").addClass("addEvent");
                 }
                 else{
@@ -402,6 +402,19 @@ var hongo = {
     },
 
     section03Fn : function(){
+        //섹션03 높이 잡기
+        var sec03 = $("#section03");
+        var sec03Ul = $("#section03 ul");
+        var _winW = $(window);
+
+        sec03.css({ height:sec03Ul.height() });
+        
+        function resizeFn(){
+            sec03.css({ height:sec03Ul.height() });
+        }
+        _winW.resize(function(){
+            resizeFn();
+        })
 
         // parallax
         setTimeout(sectionScrollFn,100);
@@ -473,9 +486,8 @@ var hongo = {
     },
 
     section04Fn : function(){
-
         // parallax
-        setTimeout(sectionScrollFn,100);
+/*         setTimeout(sectionScrollFn,100);
 
         function sectionScrollFn(){
 
@@ -488,7 +500,7 @@ var hongo = {
                 }
             })
         }
-
+ */
         $("#section04 .content").each(function(idx){
             $(this).on({
                 mouseenter : function(){
@@ -507,15 +519,30 @@ var hongo = {
     },
 
     section05Fn : function(){
+        
         var rightWrapW = $(".right-wrap .content").innerWidth();
         var rightWrapH = rightWrapW * 0.228922625;
         var contentH2 = $(".right-wrap .content h2").innerHeight();
         var contentA = $(".right-wrap .content a").innerHeight();
         var contentTop = rightWrapH-(contentH2+contentA);
+        
+        $(".right-wrap .content").css({height:rightWrapH});
 
+        function resizeFn(){
+
+        rightWrapW = $(".right-wrap .content").innerWidth();
+        rightWrapH = rightWrapW * 0.228922625;
+        contentH2 = $(".right-wrap .content h2").innerHeight();
+        contentA = $(".right-wrap .content a").innerHeight();
+        contentTop = rightWrapH-(contentH2+contentA);
         
         $(".right-wrap .content").css({height:rightWrapH});
         $(".right-wrap .content").css({top:contentTop/2/* 59.461 */});
+        }
+
+        $(window).resize(function(){
+            resizeFn();
+        })
 
     },
 

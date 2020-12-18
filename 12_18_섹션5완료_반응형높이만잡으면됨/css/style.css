@@ -49,6 +49,7 @@
 #main #section01 #header .gap .content .menu .menu-wrap .nav > ul > li .aside0 > ul > div {width:100%;}
 #main #section01 #header .gap .content .menu .menu-wrap .nav > ul > li .aside0 > ul > div > span {display:inline-block;margin:0 auto;}
 #main #section01 #header .gap .content .menu .menu-wrap .nav > ul > li .aside0 > ul > div > span > a {display:inline-block;padding:5px 15px;font-size:6px;line-height:14px;color:#8d8d8d;border:1px solid #8d8d8d;}
+#main #section01 #header .gap .content .menu .menu-wrap .nav > ul > li .aside0 > ul > div > span:hover > a {color:#fff;background:#8d8d8d;border:1px solid #8d8d8d;transition:all .5s;}
 #main #section01 #header .gap .content .menu .menu-wrap .nav > ul > li .aside0 > ul > li > div > ul {width:100%;}
 #main #section01 #header .gap .content .menu .menu-wrap .nav > ul > li .aside0 > ul > li > div > ul > h3 {width:100%;}
 
@@ -302,13 +303,13 @@
 #main #section01 .slide-container .slide-view .sns-wrap > div:nth-child(6) {transform:rotate(270deg);margin-top:45px;}
 #main #section01 .slide-container .slide-view .sns-wrap > div:nth-child(6) .follow-txt {display:block;position:relative;top:-34px;letter-spacing:1px;font-size:12px;color:#77716c;font-weight:600;text-transform:uppercase;}
 
-#main #section02 {width:100%;padding:60px 0;background:transparent;transition:all 1s;margin-top:50px;opacity:0;}
+#main #section02 {position:relative;width:100%;background:transparent;transition:all 1s;margin-top:50px;opacity:0;}
 #main #section02.addEvent {margin-top:0;opacity:1;}
 #main #section02 .wrap {width:100%;max-width:1200px;margin:0 auto;}
-#main #section02 .wrap .gap {width:100%;}
+#main #section02 .wrap .gap {padding:60px 0;box-sizing:border-box;}
 #main #section02 .wrap .gap .content {width:100%;text-align:center;}
 #main #section02 .wrap .gap .content > ul {width:100%;}
-#main #section02 .wrap .gap .content > ul > li {width:25%;float:left;font-size:13px;color:#808080;}
+#main #section02 .wrap .gap .content > ul > li {float:left;width:25%;line-height:24px;font-size:13px;color:#808080;}
 #main #section02 .wrap .gap .content > ul > li:hover {animation:sec2Ani .9s ease-in-out;}
 @keyframes sec2Ani{
     0% {transform:rotateY(0deg);}
@@ -317,57 +318,59 @@
 }
 #main #section02 .wrap .gap .content > ul > li > i {display:inline-block;padding-right:20px;}
 
-#main #section03 {width:100%;height:auto;background:transparent;transition:all 1s;margin-top:50px;opacity:0;}
+#main #section03 {width:100%;max-height:425.808px;position:relative;background:transparent;transition:all 1s;margin-top:50px;opacity:0;}
 #main #section03.addEvent {margin-top:0;opacity:1;}
 #main #section03 .wrap {width:100%;}
-#main #section03 .wrap .content {width:100%;height:auto;}
-#main #section03 .wrap .content > ul {width:100%;height:auto;}
-#main #section03 .wrap .content > ul > li {float:left;width:25%;text-align:center;height:100%;max-height:431.02px;}
-#main #section03 .wrap .content > ul > li:nth-child(1) {background:url(../img/watch-banner-05-new.jpg) no-repeat 50% 50%;background-size:cover;}
-#main #section03 .wrap .content > ul > li:nth-child(4) {background:url(../img/watch-banner-04.jpg) no-repeat 50% 50%;background-size:cover;}
-#main #section03 .wrap .content > ul > li:nth-child(1) > div,
-#main #section03 .wrap .content > ul > li:nth-child(4) > div {padding:13.6% 14.893617% 9.5%;height:100%;max-height:321.141px;}
-#main #section03 .wrap .content > ul > li:nth-child(1) > div > h2 {color:#fff;font-size:12px;line-height:24px;}
-#main #section03 .wrap .content > ul > li:nth-child(4) > div > h2 {color:#cca47d;font-size:12px;line-height:24px;}
-#main #section03 .wrap .content > ul > li:nth-child(1) > div > a,
-#main #section03 .wrap .content > ul > li:nth-child(4) > div > a {display:inline-block;}
-#main #section03 .wrap .content > ul > li:nth-child(1) > div > a > span {display:inline-block;font-size:22px;color:#020202;line-height:24px;font-weight:300;}
-#main #section03 .wrap .content > ul > li:nth-child(4) > div > a > span {display:inline-block;font-size:22px;color:#fff;line-height:24px;font-weight:300;}
+#main #section03 .wrap .gap {display:block;}
+#main #section03 .wrap .gap .content {width:100%;}
+#main #section03 .wrap .gap .content > ul {width:100%;}
+#main #section03 .wrap .gap .content > ul > li {float:left;width:25%;text-align:center;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(1) {background:url(../img/watch-banner-05-new.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(4) {background:url(../img/watch-banner-04.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(1) > div,
+#main #section03 .wrap .gap .content > ul > li:nth-child(4) > div {padding:13.6% 14.893617% 9.5%;height:100%;max-height:321.141px;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(1) > div > h2 {color:#fff;font-size:12px;line-height:24px;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(4) > div > h2 {color:#cca47d;font-size:12px;line-height:24px;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(1) > div > a,
+#main #section03 .wrap .gap .content > ul > li:nth-child(4) > div > a {display:inline-block;height:0;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(1) > div > a > span {display:inline-block;font-size:22px;color:#020202;line-height:24px;font-weight:300;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(4) > div > a > span {display:inline-block;font-size:22px;color:#fff;line-height:24px;font-weight:300;}
 
-#main #section03 .wrap .content > ul > li:nth-child(2) {background:url(../img/watch-banner-02-new.jpg) no-repeat 50% 50%;background-size:cover;}
-#main #section03 .wrap .content > ul > li:nth-child(2) > div {padding:13.6% 0 9.5%;height:100%;max-height:321.141px;text-align:center;position:relative;}
-#main #section03 .wrap .content > ul > li:nth-child(2) > div > a {transform:scale(1);display:inline-block;margin:27% auto;width:100%;max-width:65px;height:100%;max-height:65px;border-radius:50%;border:4px solid #fff;line-height:65px;}
-#main #section03 .wrap .content > ul > li:nth-child(2) > div > a:hover {transform:scale(1.2);}
-#main #section03 .wrap .content > ul > li:nth-child(2) > div > a > i {font-size:25px;color:#fff;display:inline-block;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(2) {background:url(../img/watch-banner-02-new.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(2) > div {padding:13.6% 0 9.5%;height:100%;max-height:321.141px;text-align:center;position:relative;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(2) > div > a {transform:scale(1);display:inline-block;margin:27% auto;width:100%;max-width:65px;height:100%;max-height:65px;border-radius:50%;border:4px solid #fff;line-height:65px;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(2) > div > a:hover {transform:scale(1.2);}
+#main #section03 .wrap .gap .content > ul > li:nth-child(2) > div > a > i {font-size:25px;color:#fff;display:inline-block;}
 
-#main #section03 .wrap .content > ul > li:nth-child(3) {background:url(../img/watch-banner-06-new.jpg) no-repeat 50% 50%;background-size:cover;}
-#main #section03 .wrap .content > ul > li:nth-child(3) > a {display:inline-block;padding:13.6% 0 9.5%;height:100%;max-height:321.141px;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(3) {background:url(../img/watch-banner-06-new.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section03 .wrap .gap .content > ul > li:nth-child(3) > a {display:inline-block;padding:13.6% 0 9.5%;height:100%;max-height:321.141px;}
 
-#main #section04 {width:100%;transition:all 1s;margin-top:105px;opacity:0;padding:130px 131.359px;box-sizing:border-box;background:transparent;}
-#main #section04.addEvent {margin-top:55px;opacity:1;}
+#main #section04 {position:relative;width:100%;/* transition:all 1s;margin-top:105px;opacity:0;background:transparent; */}
+/* #main #section04.addEvent {margin-top:55px;opacity:1;} */
 #main #section04 .wrap {width:100%;}
-#main #section04 .wrap .title-wrap {text-align:center;margin-bottom:65px;}
-#main #section04 .wrap .title-wrap > h2 {font-size:28px;color:#232323;font-weight:600;line-height:30px;}
-#main #section04 .wrap .title-wrap > h3 {font-size:13px;color:#808080;line-height:24px;padding-bottom:65px;}
+#main #section04 .wrap .gap {padding:130px 10.18376%;box-sizing:border-box;}
+#main #section04 .wrap .gap .title-wrap {text-align:center;margin-bottom:65px;}
+#main #section04 .wrap .gap .title-wrap > h2 {font-size:28px;color:#232323;font-weight:600;line-height:30px;}
+#main #section04 .wrap .gap .title-wrap > h3 {font-size:13px;color:#808080;line-height:24px;padding-bottom:65px;}
 
-#main #section04 .wrap .container {display:block;}
-#main #section04 .wrap .container .gap {padding:0 15px;}
-#main #section04 .wrap .container .gap:after {content:"";display:block;clear:both;}
-#main #section04 .wrap .container .gap .content {float:left;margin:0 -10px 0 10px;width:20%;}
-#main #section04 .wrap .container .gap .content > div {padding:10px;overflow:hidden;}
-#main #section04 .wrap .container .gap .content > div > a {display:block;max-width:281.078px;max-height:358.297px;}
-#main #section04 .wrap .container .gap .content > div > a > img {display:block;max-width:100%;max-height:100%;}
-#main #section04 .wrap .container .gap .content > div .txt-wrap {padding:20px 15px 0;text-align:center;transition:transform .3s}
-#main #section04 .wrap .container .gap .content > div .txt-wrap > a {display:block;line-height:20px;font-size:12px;font-weight:700;color:#232323;transition:color .4s;}
-#main #section04 .wrap .container .gap .content > div .txt-wrap > span {margin-bottom:10px;display:block;line-height:24px;font-size:13px;color:#808080;}
-#main #section04 .wrap .container .gap .content > div .button-wrap {position:relative;top:50px;padding:0 15px;transition:transform .5s}
-#main #section04 .wrap .container .gap .content > div .button-wrap:after {content:"";display:block;clear:both;}
-#main #section04 .wrap .container .gap .content > div .button-wrap > a:nth-child(1){float:left;display:block;margin-top:5px;border-bottom:2px solid #232323;line-height:18px;font-size:11px;color:#232323;}
-#main #section04 .wrap .container .gap .content > div .button-wrap > a:nth-child(2){float:right;display:block;margin-left:5%;color:#232323;line-height:22px;}
-#main #section04 .wrap .container .gap .content > div .button-wrap > a:nth-child(3){float:right;display:block;color:#232323;line-height:22px;}
-#main #section04 .wrap .container .gap .content:hover {background:#fff;}
-#main #section04 .wrap .container .gap .content:hover > div .txt-wrap {transform:translateY(-40px);background:#fff;}
-#main #section04 .wrap .container .gap .content > div .txt-wrap > a:hover {color:#b88b5f;}
+#main #section04 .wrap .gap .container {display:block;}
+#main #section04 .wrap .gap .container .container-gap {padding:0 15px;}
+#main #section04 .wrap .gap .container .container-gap:after {content:"";display:block;clear:both;}
+#main #section04 .wrap .gap .container .container-gap .content {float:left;margin:0 -10px 0 10px;width:20%;}
+#main #section04 .wrap .gap .container .container-gap .content > div {padding:10px;overflow:hidden;}
+#main #section04 .wrap .gap .container .container-gap .content > div > a {display:block;max-width:281.078px;max-height:358.297px;}
+#main #section04 .wrap .gap .container .container-gap .content > div > a > img {display:block;max-width:100%;max-height:100%;}
+#main #section04 .wrap .gap .container .container-gap .content > div .txt-wrap {padding:20px 15px 0;text-align:center;transition:transform .3s}
+#main #section04 .wrap .gap .container .container-gap .content > div .txt-wrap > a {display:block;line-height:20px;font-size:12px;font-weight:700;color:#232323;transition:color .4s;}
+#main #section04 .wrap .gap .container .container-gap .content > div .txt-wrap > span {margin-bottom:10px;display:block;line-height:24px;font-size:13px;color:#808080;}
+#main #section04 .wrap .gap .container .container-gap .content > div .button-wrap {position:relative;top:50px;padding:0 15px;transition:transform .5s}
+#main #section04 .wrap .gap .container .container-gap .content > div .button-wrap:after {content:"";display:block;clear:both;}
+#main #section04 .wrap .gap .container .container-gap .content > div .button-wrap > a:nth-child(1){float:left;display:block;margin-top:5px;border-bottom:2px solid #232323;line-height:18px;font-size:11px;color:#232323;}
+#main #section04 .wrap .gap .container .container-gap .content > div .button-wrap > a:nth-child(2){float:right;display:block;margin-left:5%;color:#232323;line-height:22px;}
+#main #section04 .wrap .gap .container .container-gap .content > div .button-wrap > a:nth-child(3){float:right;display:block;color:#232323;line-height:22px;}
+#main #section04 .wrap .gap .container .container-gap .content:hover {background:#fff;}
+#main #section04 .wrap .gap .container .container-gap .content:hover > div .txt-wrap {transform:translateY(-40px);background:#fff;}
+#main #section04 .wrap .gap .container .container-gap .content > div .txt-wrap > a:hover {color:#b88b5f;}
 
 #main #section05 {width:100%;}
 #main #section05 .wrap {width:100%;}
@@ -452,7 +455,7 @@
 
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div {z-index:2;display:inline-block;position:absolute;right:11px;bottom:0;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span {display:block;float:right;}
-#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a {position:relative;opacity:1;display:inline-block;width:45px;background:#fff;line-height:45px;text-align:center;transition:background .4s;}
+#main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a {position:relative;opacity:0;display:inline-block;width:45px;background:#fff;line-height:45px;text-align:center;transition:background .4s;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span a.white-btn1 {bottom:-800px;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span a.white-btn2 {bottom:-800px;}
 #main #section06 .wrap .gap .content .right .right-wrap .right-gap .right-content .monochrome > div > span > a > i {width:13px;line-height:13px;font-size:13px;color:#818181;transition:color .4s;}
