@@ -376,16 +376,19 @@
 
 #main #section05 {width:100%;}
 #main #section05 .wrap {width:100%;}
-#main #section05 .wrap .left-wrap {float:left;width:33.3333333%;}
-#main #section05 .wrap .left-wrap > a {display:block;width:100%;}
+#main #section05 .wrap .left-wrap {float:left;width:33.3333333%;position:relative;left:-500px;opacity:0;transition:all 1s;}
+#main #section05.addEvent .wrap .left-wrap {left:0;opacity:1;}
+#main #section05 .wrap .left-wrap > a {width:100%;display:block;max-width:634.328px;}
 #main #section05 .wrap .left-wrap > a > img {display:block;width:100%;}
-#main #section05 .wrap .right-wrap {float:left;width:66.6666667%;background:url(../img/graphic-banner-7.jpg) no-repeat 50% 50%;background-size:cover;}
-#main #section05 .wrap .right-wrap .gap {padding:100px 110px;}
-#main #section05 .wrap .right-wrap .gap .content {position:relative;width:100%;}/*제이쿼리 TOP값있음*/
-#main #section05 .wrap .right-wrap .gap .content > h2 {width:100%;margin-bottom:8px;line-height:20px;}
-#main #section05 .wrap .right-wrap .gap .content > h2 > i {display:inline-block;width:10px;height:2px;background:#b88b5f;}
-#main #section05 .wrap .right-wrap .gap .content > h2 > span {display:inline-block;font-size:12px;color:#b88b5f;}
-#main #section05 .wrap .right-wrap .gap .content > a {display:block;color:#f0f0f0;font-size:28px;line-height:33px;}
+#main #section05 .wrap .right-wrap {float:left;width:66.6666667%;position:relative;right:-500px;opacity:0;transition:all 1s;background:url(../img/graphic-banner-7.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section05.addEvent .wrap .right-wrap {right:0;opacity:1;}
+#main #section05 .wrap .right-wrap .gap {padding:100px 110px;box-sizing:border-box;}
+#main #section05 .wrap .right-wrap .gap .content {position:relative;width:100%;min-width:780px;}
+#main #section05 .wrap .right-wrap .gap .content .text-wrap {display:block;position:absolute;top:0;left:0;}
+#main #section05 .wrap .right-wrap .gap .content .text-wrap > h2 {width:100%;margin-bottom:8px;line-height:20px;}
+#main #section05 .wrap .right-wrap .gap .content .text-wrap > h2 > i {display:inline-block;margin-right:5px;width:10px;height:2px;background:#b88b5f;}
+#main #section05 .wrap .right-wrap .gap .content .text-wrap > h2 > span {display:inline-block;font-size:12px;color:#b88b5f;}
+#main #section05 .wrap .right-wrap .gap .content .text-wrap > a {display:block;color:#f0f0f0;font-size:28px;line-height:33px;}
 
 
 #main #section06 {height:auto;padding:130px 228px;box-sizing:border-box;background:transparent;}

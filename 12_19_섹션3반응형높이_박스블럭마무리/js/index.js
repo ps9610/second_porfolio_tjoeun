@@ -469,7 +469,7 @@ var hongo = {
 
     section04Fn : function(){
         var _winW = $(window).innerWidth();
-        
+
         // parallax
         setTimeout(sectionScrollFn,100);
 
@@ -510,25 +510,82 @@ var hongo = {
     },
 
     section05Fn : function(){
-        
-        var rightWrapW = $(".right-wrap .content").innerWidth();
-        var rightWrapH = rightWrapW * 0.228922625;
-        var contentH2 = $(".right-wrap .content h2").innerHeight();
-        var contentA = $(".right-wrap .content a").innerHeight();
-        var contentTop = rightWrapH-(contentH2+contentA);
-        
-        $(".right-wrap .content").css({height:rightWrapH});
 
+        // parallax
+        setTimeout(sectionScrollFn,100);
+
+        function sectionScrollFn(){
+
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > $("#section05").offset().top-120 ){
+                    $("#section05").addClass("addEvent");
+                }
+                else{
+                    $("#section05").removeClass("addEvent");
+                }
+            })
+        }
+
+        var _winW = $(window).innerWidth();
+
+        var content = $("#section05 .content");
+        var contentW = $("#section05 .content").innerWidth();
+        var contentRate = 0.227162668;
+        var contentH = contentW*contentRate;
+
+        var sec05Right = $("#section05 .right-wrap, #section05 .right-wrap .gap");
+        var sec05LeftH= $("#section05 .left-wrap").innerHeight();
+
+        var sec05RightH2 = sec05Right.find("h2");
+        var sec05H2Rate = 0.013350371;
+        var sec05RightSpan = sec05Right.find("span");
+        var sec05SpanRate = 0.011443;
+        var sec05RightA = sec05Right.find("a");
+        var sec05ARate =0.026700742;
+        var sec05RightFontW = sec05Right.find(".content").innerWidth();
+        
+        var sec05RightFont = sec05Right.find(".text-wrap");
+        var sec05RightFontH = sec05Right.find(".text-wrap").innerHeight();
+
+
+        //섹션05 콘텐츠박스, 반응형 높이, 폰트잡기
+        setTimeout(resizeFn, 100);
         function resizeFn(){
+            
+            
+            //반응형 높이
+            sec05Right = $("#section05 .right-wrap, #section05 .right-wrap .gap");
+            sec05LeftH= $("#section05 .left-wrap").innerHeight();
 
-        rightWrapW = $(".right-wrap .content").innerWidth();
-        rightWrapH = rightWrapW * 0.228922625;
-        contentH2 = $(".right-wrap .content h2").innerHeight();
-        contentA = $(".right-wrap .content a").innerHeight();
-        contentTop = rightWrapH-(contentH2+contentA);
-        
-        $(".right-wrap .content").css({height:rightWrapH});
-        $(".right-wrap .content").css({top:contentTop/2/* 59.461 */});
+            sec05Right.css({ height:sec05LeftH });
+
+            //콘텐츠 박스 높이 잡기
+            content = $("#section05 .content");
+            contentW = $("#section05 .content").innerWidth();
+            contentRate = 0.227162668;
+            contentH = contentW*contentRate;
+            
+            content.css({ height:contentH });
+
+            //폰트 잡기
+            sec05RightH2 = sec05Right.find("h2");
+            sec05H2Rate = 0.013350371;
+            sec05RightSpan = sec05Right.find("span");
+            sec05SpanRate = 0.011443;
+            sec05RightA = sec05Right.find("a");
+            sec05ARate =0.026700742;
+            sec05RightFontW = sec05Right.find(".content").innerWidth();
+            
+            sec05RightH2.css({ fontSize:sec05RightFontW*sec05H2Rate });
+            sec05RightSpan.css({ fontSize:sec05RightFontW*sec05SpanRate });
+            sec05RightA.css({ fontSize:sec05RightFontW*sec05ARate });
+
+            //폰트 수직가운데정렬
+            sec05RightFont = sec05Right.find(".text-wrap");
+            sec05RightFontH = sec05Right.find(".text-wrap").innerHeight();
+            if( _winW>767 ){
+                sec05RightFont.css({ marginTop:(contentH-sec05RightFontH)/2 });
+            }
         }
 
         $(window).resize(function(){
