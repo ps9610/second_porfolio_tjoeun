@@ -347,8 +347,8 @@
 #main #section03 .wrap .gap .content .sec03-fourth > div .text-wrap > h2 {font-size:12px;line-height:24px;color:#cca47d;}
 #main #section03 .wrap .gap .content .sec03-fourth > div .text-wrap > a {display:inline-block;color:#fff;font-size:21px;line-height:24px;}
 
-#main #section04 {position:relative;width:100%;/* transition:all 1s;margin-top:105px;opacity:0;background:transparent; */}
-/* #main #section04.addEvent {margin-top:55px;opacity:1;} */
+#main #section04 {position:relative;width:100%;transition:all 1s;margin-top:55px;opacity:0;background:transparent;}
+#main #section04.addEvent {margin-top:0;opacity:1;}
 #main #section04 .wrap {width:100%;}
 #main #section04 .wrap .gap {padding:130px 10.18376%;box-sizing:border-box;}
 #main #section04 .wrap .gap .title-wrap {text-align:center;margin-bottom:65px;}
@@ -359,8 +359,8 @@
 #main #section04 .wrap .gap .container .container-gap {padding:0 15px;}
 #main #section04 .wrap .gap .container .container-gap:after {content:"";display:block;clear:both;}
 #main #section04 .wrap .gap .container .container-gap .content {float:left;margin:0 -10px 0 10px;width:20%;}
-#main #section04 .wrap .gap .container .container-gap .content > div {padding:10px;overflow:hidden;}
-#main #section04 .wrap .gap .container .container-gap .content > div > a {display:block;max-width:281.078px;max-height:358.297px;}
+#main #section04 .wrap .gap .container .container-gap .content > div {padding:10px;overflow:hidden;box-sizing:border-box;}
+#main #section04 .wrap .gap .container .container-gap .content > div > a {display:block;margin:0 auto;max-width:281.078px;max-height:358.297px;}
 #main #section04 .wrap .gap .container .container-gap .content > div > a > img {display:block;max-width:100%;max-height:100%;}
 #main #section04 .wrap .gap .container .container-gap .content > div .txt-wrap {padding:20px 15px 0;text-align:center;transition:transform .3s}
 #main #section04 .wrap .gap .container .container-gap .content > div .txt-wrap > a {display:block;line-height:20px;font-size:12px;font-weight:700;color:#232323;transition:color .4s;}

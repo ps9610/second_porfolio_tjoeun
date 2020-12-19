@@ -468,8 +468,10 @@ var hongo = {
     },
 
     section04Fn : function(){
+        var _winW = $(window).innerWidth();
+        
         // parallax
-/*         setTimeout(sectionScrollFn,100);
+        setTimeout(sectionScrollFn,100);
 
         function sectionScrollFn(){
 
@@ -482,18 +484,25 @@ var hongo = {
                 }
             })
         }
- */
+
+        //시계 하나 하나에 호버 시 이미지 변경
         $("#section04 .content").each(function(idx){
+
             $(this).on({
                 mouseenter : function(){
                     //console.log(idx)
                     $("#section04 .content").eq(idx).find("img").attr("src","./img/watch-home-feature-products-"+ idx +"-a-768x979.jpg");
                     //console.log("src","./img/watch-home-feature-products-"+ idx +"-a-768x979.jpg")
-                    $(".button-wrap").eq(idx).stop().animate({top:0},300);
+                    if( _winW>=1200 ){
+                        $(".button-wrap").eq(idx).stop().animate({top:0},300);
+                    }   
                 },
                 mouseleave : function(){
                     $("#section04 .content").eq(idx).find("img").attr("src","./img/watch-home-feature-products-"+ idx +"-768x979.jpg");
+                    
+                    if( _winW>=1200 ){
                     $(".button-wrap").eq(idx).stop().animate({top:50},300);
+                    }
                 }
             })
         })
