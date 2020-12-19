@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 @media all and (max-width:1500px){
+    #main #section03 .wrap .gap .content .sec03-first > div {padding:35px 55px 45px;}
+    #main #section03 .wrap .gap .content .sec03-second > div {padding:35px 55px 45px;}
+    #main #section03 .wrap .gap .content .sec03-third .text-wrap {padding:35px 0 45px;}
+    #main #section03 .wrap .gap .content .sec03-fourth > div {padding:35px 55px 45px;}
+    
     #main #section04 {padding:90px 15px;}
 
     #main #section06 .wrap .gap {padding:0 15px;}
@@ -22,8 +27,10 @@
     #main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .image-wrap {width:40%;}
     #main #section01 .slide-container .slide-view .slide-wrap > li > div .content-wrap .content-gap .text-wrap {width:50%;margin-right:10%;}
     
-    #main #section03 .wrap .content > ul > li:nth-child(1) > div > span {margin-top:15px;}
-    #main #section03 .wrap .content > ul > li:nth-child(4) > div > span {margin-top:15px;}
+    #main #section03 .wrap .gap .content .sec03-first > div {padding:25px;}
+    #main #section03 .wrap .gap .content .sec03-second > div {padding:25px;}
+    #main #section03 .wrap .gap .content .sec03-third .text-wrap {padding:25px 0;}
+    #main #section03 .wrap .gap .content .sec03-fourth > div {padding:25px;}
     
     #main #section04 {padding:0 15px;}
     #main #section04 .wrap .container .gap .content {margin:0 0 0 0;width:33.33333333%;}
@@ -44,14 +51,15 @@
 
 @media all and (max-width:991px){
     .quick {display:none;}
-    #main #section02 {box-sizing:border-box;padding:60px 120.5px;}
+    #main #section02 {box-sizing:border-box;padding:60px 10px;}
+    #main #section02 .wrap .gap {padding:0;}
     #main #section02 .wrap .gap .content > ul > li {width:50%;margin:15px 0 15px 0;}
 
-    #main #section03 .wrap .content > ul > li {width:50%;height:80%;}
-    #main #section03 .wrap .content > ul > li:nth-child(1) > div,
-    #main #section03 .wrap .content > ul > li:nth-child(2) > div,
-    #main #section03 .wrap .content > ul > li:nth-child(4) > div {padding:35px 25px;}
-    #main #section03 .wrap .content > ul > li:nth-child(3) > a {padding:35px 25px;}
+    #main #section03 .wrap .gap .content .sec03-first > div {padding:35px 25px;}
+    #main #section03 .wrap .gap .content .sec03-second > div {padding:35px 25px;}
+    #main #section03 .wrap .gap .content .sec03-third .text-wrap {padding:35px 0;}
+    #main #section03 .wrap .gap .content .sec03-fourth > div {padding:35px 25px;}
+    #main #section03 .wrap .gap .content > li {float:left;width:50%;}
 
     #main #section04 {padding:80px 15px;}
     #main #section04 .wrap .title-wrap {margin-bottom:0;}
@@ -77,8 +85,13 @@
     #main #section02 .wrap .gap .content > ul > li {float:none;width:100%;margin:0 0 30px 0;}
     #main #section02 .wrap .gap .content > ul > li:last-child {float:none;width:100%;margin:0;}
 
-    #main #section03 {width:100%;height:auto;}
-    #main #section03 .wrap .content > ul > li {float:none;width:100%;}
+    #main #section03 .wrap .gap .content > li {float:none;width:100%;}
+    #main #section03 .wrap .gap .content .sec03-first > div {padding:117px 105px 81px;}
+    #main #section03 .wrap .gap .content .sec03-second > div {padding:117px 105px 81px;}
+    #main #section03 .wrap .gap .content .sec03-third .text-wrap {padding:117px 0 81px;}
+    #main #section03 .wrap .gap .content .sec03-fourth > div {padding:117px 105px 81px;}
+    #main #section03 .wrap .gap .content .sec03-first .text-wrap > h2 {margin-bottom:3.4744526%;}
+    #main #section03 .wrap .gap .content .sec03-fourth .text-wrap > h2 {margin-bottom:3.4744526%;}
 
     #main #section04 {position:relative;top:800px;padding:50px 15px;}
     #main #section04.addEvent {margin-top:0;}
@@ -103,10 +116,18 @@
 
 @media all and (max-width:680px){
     .modal .container {width:95%;margin:0 auto;}
+
+    #main #section03 .wrap .gap .content .sec03-first > div {padding:35px 55px 45px;}
+    #main #section03 .wrap .gap .content .sec03-second > div {padding:35px 55px 45px;}
+    #main #section03 .wrap .gap .content .sec03-third .text-wrap {padding:35px 0 45px;}
+    #main #section03 .wrap .gap .content .sec03-fourth > div {padding:35px 55px 45px;}
 }
 
 @media all and (max-width:500px){
     .modal .container {width:90%;margin:0 auto;}
+    
+    #main #section03 .wrap .gap .content .sec03-first .text-wrap > h2 {margin-bottom:3.4744526%;}
+    #main #section03 .wrap .gap .content .sec03-fourth .text-wrap > h2 {margin-bottom:3.4744526%;}
 }
 
 @media all and (max-width:1200px) and (orientation:landscape) {

@@ -402,22 +402,25 @@ var hongo = {
     },
 
     section03Fn : function(){
-        //섹션03 높이 잡기
+
+        var _win = $(window);
+
         var sec03 = $("#section03");
         var sec03Ul = $("#section03 ul");
-        var _winW = $(window);
+        var sec03TextWrap = $("#section03 .text-wrap");
+        var sec03TextWrapW = $("#section03 .text-wrap").innerWidth();
+        var sec03TextWrapR = 0.956488459;
 
-        sec03.css({ height:sec03Ul.height() });
-        
-        function resizeFn(){
-            sec03.css({ height:sec03Ul.height() });
-        }
-        _winW.resize(function(){
-            resizeFn();
-        })
+        var _winW = $(window).innerWidth();
+        var fontH2 = $("#section03 .text-wrap h2");
+        var fontH2W = $("#section03 .text-wrap h2").innerWidth();
+        var rateH2 = 0.035740879;
+        var fontA = $("#section03 .text-wrap .sec03-txt");
+        var fontAW = $("#section03 .text-wrap .sec03-txt").innerWidth();
+        var rateA = 0.114519427;
 
         // parallax
-        setTimeout(sectionScrollFn,100);
+       setTimeout(sectionScrollFn,100);
 
         function sectionScrollFn(){
 
@@ -430,57 +433,36 @@ var hongo = {
                 }
             })
         }
-
-        var _winW = $(window).innerWidth();
-        var fontH2 = $(".sec3txt h2");
-        var fontSpan = $(".sec3txt span");
-
-        var h2Rate = 0.025263158;
-        var spanRate = 0.046315789;
-        var lineHeightRate = 0.054419301;
-
-        var resizeFontH2 = sec3txtW*h2Rate;
-        var resizeFontSpan = sec3txtW*spanRate;
-        var resizeLineHeight = liHeight*lineHeightRate; 
-
-        var sec3txtW = $(".sec3txt").innerWidth();
-        var section03Div = $("#section03 div, #section03 a");
-        var liHeight= sec3txtW*0.938340426;
-    
-        // li:nth-child(2) 재생버튼 호버시 background 커지기
-
-        //반응형 폰트조정
-        setTimeout(resizeFn(),100);
         
+        setTimeout(resizeFn(),100);
+
         function resizeFn(){
             _winW = $(window).innerWidth();
-            fontH2 = $(".sec3txt h2");
-            fontSpan = $(".sec3txt span");
-        
-            h2Rate = 0.025263158;
-            spanRate = 0.046545184;
-            h2LineHeightRate = 0.037236147;
-            spanLineHeightRate = 0.05585422;
-        
-            resizeFontH2 = sec3txtW*h2Rate;
-            resizeFontSpan = sec3txtW*spanRate;
-            resizeH2LineHeight = liHeight*h2LineHeightRate;
-            resizeSpanLineHeight = liHeight*spanLineHeightRate;
-        
-            sec3txtW = $(".sec3txt").innerWidth();
-            section03Div = $("#section03 div, #section03 a");
-            liHeight= sec3txtW*0.789404255;
-        
-            section03Div.css({height : liHeight});
-            fontH2.css({fontSize : resizeFontH2, lineHeight:resizeH2LineHeight+"px", marginBottom:10});
-            fontSpan.css({fontSize : resizeFontSpan, lineHeight:resizeSpanLineHeight+"px"});
+            //섹션03 반응형 높이 잡기
+            sec03 = $("#section03");
+            sec03Li = $("#section03 li");
+            sec03TextWrap = $("#section03 .text-wrap");
+            sec03TextWrapW = $("#section03 .text-wrap").innerWidth();
+            
+            sec03TextWrap.css({ height:sec03TextWrapW*sec03TextWrapR });
 
-            if(_winW < 992){
-                section03Div.css({height : sec3txtW});
+            if( _winW < 992 ){
+                sec03.css({ height: sec03Ul.height() });
             }
+            
+            //반응형 폰트 사이즈만 조정
+            fontH2 = $("#section03 .text-wrap h2");
+            fontH2W = $("#section03 .text-wrap h2").innerWidth();
+            rateH2 = 0.035740879;;
+            fontA = $("#section03 .text-wrap .sec03-txt");
+            fontAW = $("#section03 .text-wrap .sec03-txt").innerWidth();
+            rateA = 0.114519427;
+
+            fontH2.css({ fontSize:fontH2W*rateH2 });
+            fontA.css({ fontSize:fontAW*rateA });
         }
         
-        $(window).resize(function(){
+        _win.resize(function(){
             resizeFn();
         })
     },
