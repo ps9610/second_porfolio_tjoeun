@@ -501,11 +501,11 @@
 #main #section06 .wrap .gap .container .right-wrap .right-gap .right-content .monochrome .white-btn > span > a:hover {background:#000;}
 #main #section06 .wrap .gap .container .right-wrap .right-gap .right-content .monochrome .white-btn > span > a:hover > i {color:#fff;}
 
-
 #main #section07 {width:100%;height:auto;}/*567*/
 #main #section07 .wrap {width:100%;}
 #main #section07 .wrap > ul {width:100%;}
-#main #section07 .wrap > ul .row1 {width:100%;}
+#main #section07 .wrap > ul .row1 {width:100%;position:relative;left:-500px;opacity:0;transition:all 1s;}
+#main #section07.addEvent .wrap > ul .row1 {left:0;opacity:1;}
 #main #section07 .wrap > ul .row1 .gap {padding:130px 19.4946808%;box-sizing:border-box;background:url(../img/graphic-banner-8.jpg) no-repeat 50% 50%;background-size:cover;}
 #main #section07 .wrap > ul .row1 .gap .row1-content {width:50%;} /* 767px에서 100%로 */
 #main #section07 .wrap > ul .row1 .gap .row1-content .content-padding {padding:0 15px;}
@@ -514,7 +514,8 @@
 #main #section07 .wrap > ul .row1 .gap .row1-content .content-padding .text-wrap > h2 {margin-bottom:40px;color:#fff;font-size:43px;line-height:48px;}
 #main #section07 .wrap > ul .row1 .gap .row1-content .content-padding .text-wrap > a {display:inline-block;padding:5px 28px;border-radius:50px;border:2px solid #b88b5f;background:transparent;color:#b88b5f;font-size:10px;line-height:18px;transition:all .5s;}
 #main #section07 .wrap > ul .row1 .gap .row1-content .content-padding .text-wrap > a:hover {background:#b88b5f;color:#fff;}
-#main #section07 .wrap > ul .row2 {width:100%;}
+#main #section07 .wrap > ul .row2 {width:100%;position:relative;right:-500px;opacity:0;transition:all 1s;}
+#main #section07.addEvent .wrap > ul .row2 {right:0;opacity:1;}
 #main #section07 .wrap > ul .row2 .gap {padding:0 19.2590646%;box-sizing:border-box;background:#232323;}
 #main #section07 .wrap > ul .row2 .gap .row2-content {width:100%;}
 #main #section07 .wrap > ul .row2 .gap .row2-content > li {float:left;width:25%;padding:0 15px;box-sizing:border-box;}

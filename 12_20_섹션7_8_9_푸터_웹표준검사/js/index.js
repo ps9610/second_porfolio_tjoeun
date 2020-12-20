@@ -809,8 +809,23 @@ var hongo = {
     },
 
     section07Fn :function(){
+
+        // parallax
+        setTimeout(sectionScrollFn,100);
+
+        function sectionScrollFn(){
+
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > $("#section07").offset().top-120 ){
+                    $("#section07").addClass("addEvent");
+                }
+                else{
+                    $("#section07").removeClass("addEvent");
+                }
+            })
+        }
+
     var _win = $(window);
-    var _winW = $(window).innerWidth();
     //폰트 반응형비율
     var fontH4 = $("#section07 .row1-content h4");
     var fontH2 = $("#section07 .row1-content h2");
