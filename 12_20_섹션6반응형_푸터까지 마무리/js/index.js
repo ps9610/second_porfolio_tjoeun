@@ -279,6 +279,7 @@ var hongo = {
         });
 
         //퀵메뉴 호버시 글씨 보이기, 마우스 벗어나면 다시 원상태
+        if(winW>991){
         $(".cart").on("mouseenter",function(){
             $(".h-cart").stop().animate({ right:0 },300);
         })
@@ -291,6 +292,13 @@ var hongo = {
         $(".h-mail").on("mouseleave",function(){
             $(this).stop().animate({ right:-200 },300);
         })
+        }
+        else{
+            $(".cart").hide();
+            $(".h-cart").hide();
+            $(".mail").hide();
+            $(".h-mail").hide();
+        }
     },
     /*
     // 모달창
