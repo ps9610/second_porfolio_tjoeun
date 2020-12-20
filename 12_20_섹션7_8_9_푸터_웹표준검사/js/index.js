@@ -14,6 +14,7 @@ var hongo = {
             that.section04Fn();
             that.section05Fn();
             that.section06Fn();
+            that.section07Fn();
             //that.modalFn();
     },
     scrollMoveFn : function(){
@@ -604,6 +605,21 @@ var hongo = {
 
     section06Fn : function(){
 
+        // parallax
+        setTimeout(sectionScrollFn,100);
+
+        function sectionScrollFn(){
+
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > $("#section06").offset().top-140 ){
+                    $("#section06").addClass("addEvent");
+                }
+                else{
+                    $("#section06").removeClass("addEvent");
+                }
+            })
+        }
+
         //섹션6 넓이 반응형
         var _win = $(window);
         var _winW = $(window).innerWidth();
@@ -792,6 +808,33 @@ var hongo = {
         })
     },
 
+    section07Fn :function(){
+    var _win = $(window);
+    //폰트 반응형비율
+    var fontH4 = $("#section07 .row1-content h4");
+    var fontH2 = $("#section07 .row1-content h2");
+    var fontSpan = $("#section07 .row2-content span");
+
+    var fontH4W = fontH4.innerWidth();
+    var fontSpanW = fontSpan.innerWidth();
+    var fontH2W = fontH2.innerWidth();
+
+    var h4Rate = 0.0217971;
+    var h2Rate = 0.0781064;
+    var SpanRate = 0.0904649;
+
+    setTimeout(resizeFn, 100);
+    function resizeFn(){
+        fontH4.css({ fontSize:fontH4W*h4Rate });
+        fontH2.css({ fontSize:fontH2W*h2Rate });
+        fontSpan.css({ fontSpanW:fontSpanW*SpanRate });
+    }
+        
+    _win.resize(function(){
+        resizeFn();
+    })
+
+    }
 
 
 

@@ -95,6 +95,8 @@
     #main #section06 .wrap .gap .container .right-wrap .right-gap .right-content .monochrome .white-btn > span a.white-btn2 {bottom:0;right:-301px;border-left:1px solid #ccc;}
     #main #section06 .wrap .gap .container .right-wrap .right-gap .right-content .monochrome .white-btn > span a.white-btn1 {bottom:0;right:-304px;}
 
+    #main #section07 .wrap > ul .row1 .gap {padding:90px 9.5496246%;}
+    #main #section07 .wrap > ul .row2 .gap {padding:0 9.5496246%;}
 }
     
 @media all and (max-width:991px){
@@ -117,6 +119,9 @@
     #main #section05 .wrap .right-wrap .gap .content {min-width:780px;}
 
     #main #section06 {padding:80px 0;}
+
+    #main #section07 .wrap > ul .row2 .gap .row2-content {width:50%;}
+    
 }
 
 @media all and (max-width:767px){
