@@ -810,6 +810,7 @@ var hongo = {
 
     section07Fn :function(){
     var _win = $(window);
+    var _winW = $(window).innerWidth();
     //폰트 반응형비율
     var fontH4 = $("#section07 .row1-content h4");
     var fontH2 = $("#section07 .row1-content h2");
