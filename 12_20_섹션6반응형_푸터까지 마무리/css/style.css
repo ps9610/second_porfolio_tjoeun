@@ -400,11 +400,11 @@
 #main #section06 .wrap .gap {padding:0 228px;box-sizing:border-box;}
 #main #section06 .wrap .gap .container {width:100%;}
 
-#main #section06 .wrap .gap .container .left-wrap {float:left;width:50%;}
+#main #section06 .wrap .gap .container .left-wrap {float:left;width:50%;height:auto;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap {padding:1.382170% 1.115113%;}
 
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 {width:100%;max-height:432.453px;}
-#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .blacktop {float:left;position:relative;margin-left:-2%;}
+#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .blacktop {width:40%;margin:0 5%;float:left;position:relative;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .blacktop .left-txt {z-index:2;position:absolute;top:8%;left:10%;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .blacktop .left-txt > a {display:block;line-height:18px;color:#232323;font-size:12px;transition:color .8s;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .blacktop .left-txt > a:hover {color:#b88b5f;}
@@ -427,7 +427,7 @@
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .blacktop .white-btn > span > a:hover {background:#000;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .blacktop .white-btn > span > a:hover > i {color:#fff;}
 
-#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .voyager {float:left;position:relative;margin-left:4%;}
+#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .voyager {width:40%;margin:0 5%;float:left;position:relative;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .voyager .left-txt {z-index:2;position:absolute;top:8%;left:10%;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .voyager .left-txt > a {display:block;line-height:18px;color:#232323;font-size:12px;transition:color .8s;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .voyager .left-txt > a:hover {color:#b88b5f;}
@@ -449,8 +449,8 @@
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .voyager .white-btn > span > a:hover {background:#000;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row1 .voyager .white-btn > span > a:hover > i {color:#fff;}
 
-#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 {width:100%;max-width:695px;max-height:432.453px;}
-#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 .coronada {float:left;position:relative;margin-left:-2%;margin-top:20px;}
+#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 {width:90%;margin:20% 5% 0 5%;display:block;max-width:695px;max-height:442.125px;}
+#main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 .coronada {float:left;position:relative;height:100%;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 .coronada .left-txt {z-index:2;position:absolute;top:8%;left:10%;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 .coronada .left-txt > a {display:block;line-height:18px;color:#232323;font-size:12px;transition:color .8s;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 .coronada .left-txt > a:hover {color:#b88b5f;}
@@ -473,7 +473,7 @@
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 .coronada .white-btn > span > a:hover {background:#000;}
 #main #section06 .wrap .gap .container .left-wrap .left-gap .left-row2 .coronada .white-btn > span > a:hover > i {color:#fff;}
 
-#main #section06 .wrap .gap .container .right-wrap {float:left;width:50%;}
+#main #section06 .wrap .gap .container .right-wrap {float:left;width:50%;max-height:1000px;}
 #main #section06 .wrap .gap .container .right-wrap .right-gap {padding:1.382170% 1.115113%;}
 #main #section06 .wrap .gap .container .right-wrap .right-gap .right-content {position:relative;width:100%;max-height:890.39px;}
 
