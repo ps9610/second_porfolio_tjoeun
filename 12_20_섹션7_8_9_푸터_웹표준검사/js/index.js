@@ -873,15 +873,7 @@ var hongo = {
             })
         }
         //호버시 그레이스케일
-        $(".blog-btn").on("mouseenter",function(){
-            $(".blog-img").find("img").stop().animate({ zoom:1.1, filter:grayscale(100+"%") },500);
-        })
-        $(".blog-txt").on("mouseenter",function(){
-            $(".blog-img").find("img").stop().animate({ zoom:1.1, filter:grayscale(100+"%") },500);
-        })
-        $(".content-gap").on("mouseleave",function(){
-            $(".blog-img").find("img").stop().animate({ zoom:1, filter:none });
-    })
+
         //반응형 버튼 높이 고정하기
         function resizeFn(){
         $(".blog-btn").css({top: $("#section08 .text-wrap").innerHeight()+32.2});
