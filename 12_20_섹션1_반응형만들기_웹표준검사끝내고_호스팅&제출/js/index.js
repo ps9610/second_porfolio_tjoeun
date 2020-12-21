@@ -205,12 +205,15 @@ var hongo = {
                     if(i==1){
                         i=0;
                         $(this).prev().css({color:("#8d8d8d")});
-                        $(".mobile-menu ul").eq(index).slideDown(500);
+                        $(".sideMenuBtn").removeClass("addRotate");
+                        $(this).addClass("addRotate");
+                        $(".mobile-menu .m-menu").eq(index).slideDown(500);
                     }
                     else{
                         i=1;
                         $(this).prev().css({color:("#fff")});
-                        $(".mobile-menu ul").eq(index).slideUp(200);
+                        $(".sideMenuBtn").removeClass("addRotate");
+                        $(".mobile-menu .m-menu").eq(index).slideUp(200);
                     }
                 }
             })
@@ -327,18 +330,17 @@ var hongo = {
         */
 
     section01Fn : function(){
-        var winH = $(window).innerHeight();
-        var contentWrapH = $(".content-wrap").innerHeight();
-        var contentWrapTop = (winH-contentWrapH)/2;
-        
         var winW = $(window).innerWidth();
-        var section01 = $("#section01");
+
+        var _sec01 = $("#section01");
         var textWrap = $("#section01 .text-wrap");
         var imageWrap = $("#section01 .image-wrap");
         var textW = textWrap.innerWidth();
         var textH = textW*0.538888889;
         var imageW = imageWrap.innerWidth();
         var imageH = imageW*0.996969697;
+        console.log(textW, textH)
+        console.log(imageW, imageH)
 
         var fontSizeH4 = textW*rateH4;
         var textWrapH4 = $("#section01 .text-wrap h4");
@@ -365,28 +367,7 @@ var hongo = {
         //섹션01화면 반응형
         //1. 창을 늘리고 줄일때마다 가운데 시계랑 문구의 높이가 같이 늘어나고 줄어들어야함
         function resizeFn(){
-            winH = ($(window).innerHeight())+72;
-            contentWrapH = $(".content-wrap").innerHeight();
-            contentWrapTop = (winH-contentWrapH)/2;
 
-            winW = $(window).innerWidth();
-            section01 = $("#section01");
-            textWrap = $(".text-wrap");
-            imageWrap = $(".image-wrap");
-            textW = textWrap.innerWidth();
-            textH = textW*0.538888889;
-            imageW = imageWrap.innerWidth();
-            imageH = imageW*0.996969697;
-            
-            fontSizeH4 = textW*rateH4;
-            fontSizeH2 = textW*rateH2;
-            fontSizeP = textW*rateP;
-
-            if(winW<1200){
-                textWrapH4.css({fontSize:fontSizeH4});
-                textWrapH2.css({fontSize:fontSizeH2});
-                textWrapP.css({fontSize:fontSizeP});
-            }
         }
         $(window).resize(function(){
             resizeFn()
