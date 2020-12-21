@@ -331,30 +331,33 @@ var hongo = {
 
     section01Fn : function(){
         var winW = $(window).innerWidth();
+        var contentWrap = $("#section01 .content-wrap");
 
-        var _sec01 = $("#section01");
-        var textWrap = $("#section01 .text-wrap");
-        var imageWrap = $("#section01 .image-wrap");
-        var textW = textWrap.innerWidth();
-        var textH = textW*0.538888889;
-        var imageW = imageWrap.innerWidth();
-        var imageH = imageW*0.996969697;
-        console.log(textW, textH)
-        console.log(imageW, imageH)
+        var imageW = $("#section01 .image-wrap").find("img").innerWidth();
+        var imageRate = 1.246285293;
+        var imageH = imageW*imageRate;
 
-        var fontSizeH4 = textW*rateH4;
-        var textWrapH4 = $("#section01 .text-wrap h4");
-        var rateH4 = 0.02037037;
+        var textWrap = $("#section01 .text-wrap")
 
-        var fontSizeH2 = textW*rateH2;
-        var textWrapH2 = $("#section01 .text-wrap h2");
-        var rateH2 = 0.098148148;
+        var textWrapH4 = textWrap.find("h4");
+        var textWrapH4W = textWrap.find("h4").innerWidth();
+        var rateH4 = 0.0897018;
+        var fontSizeH4 = textWrapH4W*rateH4;
 
-        var fontSizeP = textW*rateP;
-        var textWrapP = $("#section01 .text-wrap p");
-        var rateP = 0.037037037;
+        var winH = $(window).innerHeight();
+        var textWrapH2 = textWrap.find("h2");
+        var textWrapH2W = textWrap.find("h2").innerWidth();
+        var rateH2 = 0.1018868;
+        var lineHeightH2R = 0.1;
+        var fontSizeH2 = textWrapH2W*rateH2;
+        var lineheightH2 = textWrapH2W*lineHeightH2R;
 
-        //슬라이드 배경 포인터 반대쪽으로 자동이동시키기
+        var textWrapP = textWrap.find("p");
+        var textWrapPW = textWrap.find("p").innerWidth();
+        var rateP = 0.36;
+        var fontSizeP = textWrapPW*rateP;
+
+        //슬라이드 배경 마우스 포인터 반대쪽으로 자동이동시키기
         $("#section01 .li-bg").on({
             mousemove : function(event){
                 $(this).css({backgroundPosition: -event.clientX*0.025+"px " + -event.clientY*0.025+"px"},1000,"swing")  
@@ -363,14 +366,54 @@ var hongo = {
                 $(this).css({backgroundPosition: event.clientX*0.025+"px " + event.clientY*0.025+"px"},1000,"swing")
             }
         })
-        setTimeout(resizeFn,100);
+
         //섹션01화면 반응형
         //1. 창을 늘리고 줄일때마다 가운데 시계랑 문구의 높이가 같이 늘어나고 줄어들어야함
+        setTimeout(resizeFn,100);
         function resizeFn(){
+
+        winW = $(window).innerWidth();
+        contentWrap = $("#section01 .content-wrap");
+        
+        imageW = $("#section01 .image-wrap").find("img").innerWidth();
+        imageRate = 1.246285293;
+        imageH = imageW*imageRate;
+        
+        textWrapH4 = textWrap.find("h4");
+        textWrapH4W = textWrap.find("h4").innerWidth();
+        rateH4 = 0.0897018;
+        fontSizeH4 = textWrapH4W*rateH4;
+        
+        winH = $(window).innerHeight();
+        textWrapH2 = textWrap.find("h2");
+        textWrapH2W = textWrap.find("h2").innerWidth();
+        rateH2 = 0.1018868;
+        lineHeightH2R = 0.1;
+        fontSizeH2 = textWrapH2W*rateH2;
+        lineheightH2 = textWrapH2W*lineHeightH2R;
+        
+        textWrapP = textWrap.find("p");
+        textWrapPW = textWrap.find("p").innerWidth();
+        rateP = 0.027777778;
+        fontSizeP = textWrapPW*rateP;
+        
+        //시계 그림 반응형
+        $("#section01 .image-wrap").find("img").css({height:imageH})
+
+        //섹션01 사진,글씨 전체 포함 박스 반응형
+        contentWrap.css({ width:winW });
+
+        //섹션01 폰트 반응형
+        textWrapH4.css({ fontSize : fontSizeH4 });
+        textWrapH2.css({ lineHeight: (winH * lineHeightH2R)/2 + "px"  });
+        textWrapP.css({ fontSize : fontSizeP });
+        if(winW>500){
+            textWrapH2.css({ fontSize : fontSizeH2  });
+        }
 
         }
         $(window).resize(function(){
-            resizeFn()
+            resizeFn();
         })
     },
 
