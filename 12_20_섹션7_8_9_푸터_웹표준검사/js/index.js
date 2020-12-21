@@ -15,6 +15,7 @@ var hongo = {
             that.section05Fn();
             that.section06Fn();
             that.section07Fn();
+            that.section08Fn();
             //that.modalFn();
     },
     scrollMoveFn : function(){
@@ -332,23 +333,23 @@ var hongo = {
         
         var winW = $(window).innerWidth();
         var section01 = $("#section01");
-        var textWrap = $(".text-wrap");
-        var imageWrap = $(".image-wrap");
+        var textWrap = $("#section01 .text-wrap");
+        var imageWrap = $("#section01 .image-wrap");
         var textW = textWrap.innerWidth();
         var textH = textW*0.538888889;
         var imageW = imageWrap.innerWidth();
         var imageH = imageW*0.996969697;
 
         var fontSizeH4 = textW*rateH4;
-        var textWrapH4 = $(".text-wrap h4");
+        var textWrapH4 = $("#section01 .text-wrap h4");
         var rateH4 = 0.02037037;
 
         var fontSizeH2 = textW*rateH2;
-        var textWrapH2 = $(".text-wrap h2");
+        var textWrapH2 = $("#section01 .text-wrap h2");
         var rateH2 = 0.098148148;
 
         var fontSizeP = textW*rateP;
-        var textWrapP = $(".text-wrap p");
+        var textWrapP = $("#section01 .text-wrap p");
         var rateP = 0.037037037;
 
         //슬라이드 배경 포인터 반대쪽으로 자동이동시키기
@@ -825,31 +826,70 @@ var hongo = {
             })
         }
 
-    var _win = $(window);
-    //폰트 반응형비율
-    var fontH4 = $("#section07 .row1-content h4");
-    var fontH2 = $("#section07 .row1-content h2");
-    var fontSpan = $("#section07 .row2-content span");
+        var _win = $(window);
+        //폰트 반응형비율
+        var fontH4 = $("#section07 .row1-content h4");
+        var fontH2 = $("#section07 .row1-content h2");
+        var fontSpan = $("#section07 .row2-content span");
 
-    var fontH4W = fontH4.innerWidth();
-    var fontSpanW = fontSpan.innerWidth();
-    var fontH2W = fontH2.innerWidth();
+        var fontH4W = fontH4.innerWidth();
+        var fontSpanW = fontSpan.innerWidth();
+        var fontH2W = fontH2.innerWidth();
 
-    var h4Rate = 0.0217971;
-    var h2Rate = 0.0781064;
-    var SpanRate = 0.0904649;
+        var h4Rate = 0.0217971;
+        var h2Rate = 0.0781064;
+        var SpanRate = 0.0904649;
 
-    setTimeout(resizeFn, 100);
-    function resizeFn(){
-        fontH4.css({ fontSize:fontH4W*h4Rate });
-        fontH2.css({ fontSize:fontH2W*h2Rate });
-        fontSpan.css({ fontSpanW:fontSpanW*SpanRate });
-    }
+        setTimeout(resizeFn, 100);
+        function resizeFn(){
+            fontH4.css({ fontSize:fontH4W*h4Rate });
+            fontH2.css({ fontSize:fontH2W*h2Rate });
+            fontSpan.css({ fontSpanW:fontSpanW*SpanRate });
+        }
         
-    _win.resize(function(){
-        resizeFn();
-    })
+        _win.resize(function(){
+            resizeFn();
+        })
 
+    },
+
+    
+    section08Fn : function(){
+
+        var _win = $(window);
+
+        // parallax
+        setTimeout(sectionScrollFn,100);
+
+        function sectionScrollFn(){
+
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > $("#section08").offset().top-120 ){
+                    $("#section08").addClass("addEvent");
+                }
+                else{
+                    $("#section08").removeClass("addEvent");
+                }
+            })
+        }
+        //호버시 그레이스케일
+        $(".blog-btn").on("mouseenter",function(){
+            $(".blog-img").find("img").stop().animate({ zoom:1.1, filter:grayscale(100+"%") },500);
+        })
+        $(".blog-txt").on("mouseenter",function(){
+            $(".blog-img").find("img").stop().animate({ zoom:1.1, filter:grayscale(100+"%") },500);
+        })
+        $(".content-gap").on("mouseleave",function(){
+            $(".blog-img").find("img").stop().animate({ zoom:1, filter:none });
+    })
+        //반응형 버튼 높이 고정하기
+        function resizeFn(){
+        $(".blog-btn").css({top: $("#section08 .text-wrap").innerHeight()+32.2});
+        }
+
+        $(_win).resize(function(){
+            resizeFn();
+        })
     }
 
 
