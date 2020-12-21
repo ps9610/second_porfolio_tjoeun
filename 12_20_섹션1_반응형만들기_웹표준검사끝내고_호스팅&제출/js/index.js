@@ -86,6 +86,8 @@ var hongo = {
         var url = null;
 
         var htmlRoot = $("html");
+
+        var setId = 0;
         
         
         //smooth-scrolling
@@ -134,8 +136,10 @@ var hongo = {
         $(".close .close-btn").on("click", function(){
             $(".search-modal").slideUp(200);
             htmlRoot.removeClass("addScroll");
-            ("#header").show();
+            $("#header").stop().css({top:0});
         })
+        //반응형 조절하기
+        //$(".search-modal .content").css({width:})
 
         // 헤더; 장바구니 호버 시 팝업창 생성
         $(".shopping-cart, .cartNum").on({
@@ -305,7 +309,7 @@ var hongo = {
             $(".h-mail").hide();
         }
     },
-    /*
+    
     // 모달창
     modalFn : function(){
 
@@ -327,11 +331,13 @@ var hongo = {
             }
         });
     },
-        */
+        
 
     section01Fn : function(){
         var winW = $(window).innerWidth();
         var contentWrap = $("#section01 .content-wrap");
+
+        var cnt = 0;
 
         var imageW = $("#section01 .image-wrap").find("img").innerWidth();
         var imageRate = 1.246285293;
@@ -405,16 +411,29 @@ var hongo = {
 
         //섹션01 폰트 반응형
         textWrapH4.css({ fontSize : fontSizeH4 });
-        textWrapH2.css({ lineHeight: (winH * lineHeightH2R)/2 + "px"  });
+        textWrapH2.css({ lineHeight:  + "px"  });
         textWrapP.css({ fontSize : fontSizeP });
+
         if(winW>500){
             textWrapH2.css({ fontSize : fontSizeH2  });
         }
+
+        //슬라이드 컨테이너 높이
+        $("#section01 .slide-container").css({ height : $(window).innerHeight() });
 
         }
         $(window).resize(function(){
             resizeFn();
         })
+        
+
+
+        //슬라이드
+        //fadeInOut 슬라이드로 옆으로 가면서 없어지고, 다시 옆에서 오면서 나타나고 , 문구들도 위에서 떨어지도록
+
+        //MainNextSlideFn();
+        //MainPrevSlideFn();
+
     },
 
     section02Fn : function(){

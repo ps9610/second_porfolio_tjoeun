@@ -265,6 +265,10 @@
 
 }
 
+@media all and (max-width:400px){
+
+}
+
 @media all and (max-width:1200px) and (orientation:landscape) {
 }
 
