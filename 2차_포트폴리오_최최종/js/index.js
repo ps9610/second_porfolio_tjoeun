@@ -128,11 +128,11 @@ var hongo = {
 
         // 헤더 모달창 -> 돋보기 버튼 누르면 검색창 나오기
         $(".search-btn").on("click", function(){
-            $(".search-modal").slideDown(200);
+            $(".search-modal").stop().fadeIn(200);
             htmlRoot.addClass("addScroll");
         })
         $(".close .close-btn").on("click", function(){
-            $(".search-modal").slideUp(200);
+            $(".search-modal").stop().fadeOut(200);
             htmlRoot.removeClass("addScroll");
             ("#header").show();
         })
@@ -311,9 +311,10 @@ var hongo = {
 
         var htmlRoot = $("html");
         var modal = $(".modal");
-        var closeBtn = $(".close-btn");
+        var closeBtn = $(".modal .close-btn");
 
-        setTimeout(countFn,5000);
+        
+        setTimeout(countFn, 5000);
 
         function countFn(){
             modal.stop().fadeIn(0);
@@ -323,9 +324,10 @@ var hongo = {
         closeBtn.on({
             click : function(){
                 modal.stop().fadeOut(300);
-                htmlRoot.removeClass("addScroll");
             }
-        });
+        })
+        
+
     },
 
     section01Fn : function(){
@@ -357,6 +359,10 @@ var hongo = {
         var textWrapPW = textWrap.find("p").innerWidth();
         var rateP = 0.36;
         var fontSizeP = textWrapPW*rateP;
+
+        var slideWrap = $("#section01 .slide-wrap");
+        var slideW = 1903;
+        var slide = $("#section01 .slide");
 
         //슬라이드 배경 마우스 포인터 반대쪽으로 자동이동시키기
         $("#section01 .li-bg").on({
@@ -420,25 +426,44 @@ var hongo = {
         })
 
         //슬라이드
-/*         nextSlideFn();
-        setInterval(MainSlideFn, 100);
 
-        function MainSlideFn(){
-            $(".slide-wrap li").stop().animate({ left:-1903*cnt },700,function(){
-                if( cnt>2 ){ cnt=0 }
-                if( cnt<0 ){ cnt=2 }
-                $(".slide-wrap li").stop().animate({ left:-1903*cnt },0);
+        setTimeout(resizeSlideFn, 100);
+        function resizeSlideFn(){
+            slide = $("#section01 .slide");
+            slideWrap = $("#section01 .slide-wrap");
+            winW = $(window).innerWidth();
+
+            if(winW>1904){
+                winW = 1904;
+            }
+            else{
+                slideW = winW;
+            }
+
+            slide.css({width:slideW});
+            slideWrap.stop().animate({ left:-slideW*cnt },700);
+            mainSlideFn();
+        };
+
+        function mainSlideFn(){
+            $("#section01 .slide-wrap").stop().animate({ left:-slideW*cnt },700,function(){
+            $(".slide-wrap").stop().animate({ left:-slideW*cnt },0);
             });
-        }
-        function nextSlideFn(){
-            cnt++;
-            MainSlideFn();
-        }
+        };
 
-        function prevSlideFn(){
-            cnt--;
-            MainSlideFn();
-        } */
+        $(window).resize(function(){
+            resizeSlideFn();
+        })
+
+        $("#section01 .pageBtn").each(function(index){
+            $(this).on({
+                click : function(e){
+                    e.preventDefault();
+                    cnt = index;
+                    mainSlideFn();
+                }
+            })
+        })
     },
 
     section02Fn : function(){
